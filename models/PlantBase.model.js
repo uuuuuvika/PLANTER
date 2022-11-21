@@ -10,7 +10,7 @@ const plantBaseSchema = new Schema(
     }, 
     h2o: {
         type: String,
-        enum: ["ones per week", "twice per week", "ones per month", "ones per day"], 
+        enum: ["once per week", "twice per week", "once per month", "once per day"], 
         require: true
     }, 
     light: {
