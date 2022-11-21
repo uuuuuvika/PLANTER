@@ -16,6 +16,6 @@ router.post('/plantBase/create', (req, res) => {
   PlantBase.create({plantType, h2o, light, bio})
   .then((result) => console.log(result))
   .then(() => res.redirect('/plantBase/create'))
-  .catch(error => console.log('error!!!'));
+  .catch(error => console.log('error!!! YOU SUCK'));
 })
 module.exports = router;
