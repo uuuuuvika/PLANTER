@@ -19,6 +19,10 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    myPlants:[{
+      type: Schema.Types.ObjectId,
+      ref: 'PlantBase'
+    }]
   },
   {
     timestamps: true,
