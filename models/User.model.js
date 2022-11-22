@@ -21,7 +21,8 @@ const userSchema = new Schema(
     },
     myPlants:[{
       type: Schema.Types.ObjectId,
-      ref: 'PlantBase'
+      ref: "PlantBase", 
+      required: false
     }]
   },
   {

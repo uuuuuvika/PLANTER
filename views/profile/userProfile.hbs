@@ -1,8 +1,55 @@
 {{#if foundedUser}}
-  <h2>Welcome, {{ foundedUser.username }}!</h2>
-  <p>This is your profile page my friend!</p>
-  <h2>My plants: </h2>
-  
+<h2>Welcome, {{ foundedUser.username }}!</h2>
+<p>This is your profile page my friend!</p>
+
+<h2>Create an uniqe plant: </h2>
+<form action="/createUniqe" method="POST">
+
+  <label for="name">Name: </label>
+  <input type="text" name="name" id="name">
+
+  <label for="plantType">Type: </label>
+  <input type="text" name="plantType" id="plantType">
+
+  <label for="h2o">h2o: </label>
+  <label for="once-per-day">once per day</label><br>
+  <input type="radio" id="once-per-day" name="h2o" value="once per day">
+
+  <label for="once-per-week">once per week</label><br>
+  <input type="radio" id="once-per-week" name="h2o" value="once per week">
+
+  <label for="twice-per-week">twice per week</label><br>
+  <input type="radio" id="twice-per-week" name="h2o" value="twice per week">
+
+  <label for="once-per-month">once per month</label><br>
+  <input type="radio" id="once-per-month" name="h2o" value="once per month">
+
+
+  <label for="light">light: </label>
+  <label for="low-light">low light</label><br>
+  <input type="radio" id="low-light" name="light" value="low light">
+
+  <label for="direct-light">direct light</label><br>
+  <input type="radio" id="direct-light" name="light" value="direct light">
+
+  <label for="indirect-light">indirect light</label><br>
+  <input type="radio" id="indirect-light" name="light" value="indirect light">
+
+
+  <label for="bio">BIO: </label>
+  <input type="text" name="bio" id="bio">
+
+  <button type="submit">Add PLANT</button>
+</form>
+
+
+<h2>Choose plant from existing:</h2>
+
 {{else}}
-  <p>Still no logged in user, sorry!</p>
+<p>Still no logged in user, sorry!</p>
 {{/if}}
+
+
+{{!-- <form id="logout-form" class="navbar-nav ml-auto" action="/logout" method="POST">
+  <button class="btn btn-outline-success my-2 my-sm-0" id="logout">Logout</button>
+</form> --}}
