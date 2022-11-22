@@ -21,7 +21,7 @@ router.get("/signup", (req, res) => {
 });
 
 // POST /auth/signup
-router.post("/signup", isLoggedOut, (req, res) => {
+router.post("/signup", (req, res) => {
   const { username, email, password } = req.body;
 
   // Check that username, email, and password are provided
@@ -134,17 +134,17 @@ router.post("/login", (req, res, next) => {
           // Remove the password field
           delete req.session.currentUser.password;
 
-          res.redirect("/auth/userProfile");
+          res.redirect("/userProfile");
         })
         .catch((err) => next(err)); // In this case, we send error handling to the error handling middleware.
     })
     .catch((err) => next(err));
 });
 
-// USER PROFILE
-router.get('/userProfile', isLoggedIn, (req, res) => {
-  res.render('profile/userProfile', { foundedUser: req.session.currentUser });
-});
+// // USER PROFILE
+// router.get("/userProfile", isLoggedIn, (req, res) => {
+//   res.render("profile/userProfile", { foundedUser: req.session.currentUser });
+// });
 
 // GET /auth/logout
 router.get("/logout", (req, res, next) => {
