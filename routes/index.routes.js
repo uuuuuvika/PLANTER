@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 const PlantBase = require('../models/PlantBase.model');
+const Event = require('../models/Event.model');
+
 /* GET home page */
 router.get("/", (req, res, next) => {
   res.render("index");
@@ -18,4 +20,26 @@ router.post('/plantBase/create', (req, res) => {
   .then(() => res.redirect('/plantBase/create'))
   .catch(error => console.log('error!!! YOU SUCK'));
 })
+
+// EVENTS
+
+// GET
+router.get("/event/create", (req, res) => res.render("event.hbs"))
+
+/////EVENTS/////
+// POST CREATE EVENT
+router.post('/event/create', (req, res)=>{
+
+  const {date, name, coordinates,description} = req.body;
+  console.log(req.body);
+
+  Event.create({date, name, coordinates, description})
+
+  .then(() => res.redirect('/event/create'))
+  .catch(error => console.log('error!!! YOU STILL SUCK', error));
+})
+
+// GET ALL EVENTS
+
+router.get('')
 module.exports = router;
