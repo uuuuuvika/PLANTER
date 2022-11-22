@@ -1,0 +1,436 @@
+[{
+  "_id": {
+    "$oid": "637b77ae3557276c3f7dbda7"
+  },
+  "plantType": "Anthurium",
+  "h2o": "ones per week",
+  "light": "low light",
+  "bio": "This plant does not need a lot of water and can tolerate low light, but more sun will give you more of its long-lasting scarlet flowers. The only extra attention it needs is a little orchid mix in its soil when you’re repotting.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669035950618"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669035950618"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b7a4f4ddddf6131adedd8"
+  },
+  "plantType": "Calathea",
+  "h2o": "twice per week",
+  "bio": "If you're looking for a plant to spruce up a dark corner, Calathea is a great option. It can maintain its variegated foliage even in low light and grows faster than other tropical house plants. Just keep in mind that it doesn't like to dry out, the cold, or being potbound, and you should be good to go!",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669036623630"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669036623630"
+    }
+  },
+  "__v": 0,
+  "light": "twice per week"
+},{
+  "_id": {
+    "$oid": "637b7ab64ddddf6131adedda"
+  },
+  "plantType": "Croton",
+  "h2o": "twice per week",
+  "light": "direct light",
+  "bio": "Croton houseplants are a great way to add color to your home without having to worry about flowers. The leaves are emerald green and veined with orange and pink, and they can tolerate almost full sun. They're also easy to grow and come in a variety of shapes.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669036726645"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669036726645"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b7c6f4ddddf6131adedde"
+  },
+  "plantType": "Rubber Plant",
+  "h2o": "ones per week",
+  "light": "indirect light",
+  "bio": "A rubber plant is a tree that grows on one long stalk until you encourage it to branch, similar to a fiddle leaf. It is popular for its lush, waxy leaves and comes in several colors. It is simple to care for, needing moderate levels of water and sunlight. If something is wrong, it will let you know by dropping its lower leaves.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669037167351"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669037167351"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b7ce44ddddf6131adede0"
+  },
+  "plantType": "Bromeliad",
+  "h2o": "ones per week",
+  "light": "indirect light",
+  "bio": "Bromeliads are popular because they have year-round color. To keep the bracts (the technical name for their ‘flowers’) bright, they need misting, constant moisture, and protection from strong sun.  This plant is quite short-lived, only flowering once in its lifetime, but it’s easy to propagate if you want people to enjoy the colors again.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669037284953"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669037284953"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b7d474ddddf6131adede2"
+  },
+  "plantType": "Jade Plant",
+  "h2o": "ones per week",
+  "light": "direct light",
+  "bio": "Jade plants are common succulents that are often grown into miniature trees with oval-shaped leaves. They're easy to care for and respond well to regular watering and feeding by growing noticeably faster.  Cactus mix is good for this plant, but they require less bright light than other succulents. They're also supposed to bring good luck, so your effort will be rewarded.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669037383861"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669037383861"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b7de94ddddf6131adede5"
+  },
+  "plantType": "Kalanchoe",
+  "h2o": "ones per week",
+  "light": "direct light",
+  "bio": "This kalanchoe plant is common to pick up from the florist while it is still blooming. It is difficult to keep it looking good, like the African violet. Kalanchoe needs extra sand in its soil, indirect sunlight, and a monthly feed. It is easy to overwater and hates wet leaves. To get it to bloom again, it needs to be kept in the dark for 12 hours a day and exposed to low temperatures at night.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669037545788"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669037545788"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b7f101bbc1d1872257301"
+  },
+  "plantType": "Staghorn Fern",
+  "h2o": "twice per week",
+  "light": "low light",
+  "bio": "This fern gets its name from its leaves, which are shaped like antlers. It's also an air plant, so owners have to keep an eye on it. It doesn't need much light, but it does need a constant level of moisture. Mature plants should be mounted on a piece of bark instead of being planted.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669037840414"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669037840414"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b7f751bbc1d1872257305"
+  },
+  "plantType": "Ponytail Palm",
+  "h2o": "ones per week",
+  "light": "direct light",
+  "bio": "This ponytail palm plant is a combination of a palm and a succulent. The thick trunk has leaves coming out of it which is why it is called a ponytail palm. It is native to arid areas and needs bright light. It also needs extra sand in the potting mix and prefers to be too dry than too wet.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669037941282"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669037941282"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b80351bbc1d1872257307"
+  },
+  "plantType": "Phalaenopsis Orchid",
+  "h2o": "ones per week",
+  "light": "indirect light",
+  "bio": "If you are interested in growing an orchid, you should start by ensuring that it has high humidity, a special orchid potting mix, and a clear pot. The best way to water it is to run the pot under a tap every 1-2 weeks until the soil is soaked and then letting the extra water drain away. Orchids thrive in humid conditions with filtered light, so a window in the bathroom is the ideal spot for them.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669038133159"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669038133159"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b807b1bbc1d1872257309"
+  },
+  "plantType": "Philodendron",
+  "h2o": "ones per week",
+  "light": "low light",
+  "bio": "This Philodendron plant is a great climber that enjoys indirect sunlight. If the leaves are spaced far apart, it means the plant is unhappy with its light levels. If the leaves turn yellow, it means the plant is getting too much water. Happily, the plant recovers very well from both of these mistakes.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669038203437"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669038203437"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b80ed1bbc1d187225730b"
+  },
+  "plantType": "Begonia",
+  "h2o": "twice per week",
+  "light": "direct light",
+  "bio": "Begonias are popular for their beautiful leaves and flowers, but some varieties are more suited to indoor life than others. You should be careful to protect them from direct light, cold, and overwatering, but they do like to be constantly moist. A west-facing window is a great choice.  All begonias need to be deadheaded, which is an extra chore. Because they grow from rhizomes, propagating them is a new skill to learn.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669038317365"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669038317365"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b81cf1bbc1d187225730e"
+  },
+  "plantType": "Crown of Thorns",
+  "h2o": "ones per month",
+  "light": "direct light",
+  "bio": "The crown of thorns is a popular indoor succulent because it can bloom all year. It enjoys dry conditions, needs only a few hours of direct sunlight per day, and is more forgiving than other succulents if you overwater it. It’s easier to care for than most other succulents, but you must be careful of the thorns when you handle it.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669038543229"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669038543229"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b82871bbc1d1872257310"
+  },
+  "plantType": "Christmas Cactus",
+  "h2o": "ones per month",
+  "light": "indirect light",
+  "bio": "Although these plants might bloom from Thanksgiving until Easter, they are easy to keep and propagate, which is why we love them.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669038727756"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669038727756"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b82f41bbc1d1872257312"
+  },
+  "plantType": "ZZ Plant",
+  "h2o": "ones per month",
+  "light": "indirect light",
+  "bio": "The name ZZ plant comes from the Latin name for the plant, Zamioculcas zamiifolia. The plant is very easy to take care of and is almost impossible to kill, making it a great choice for people who do not want to spend a lot of time caring for their plants. The plant can grow quite large, so be sure to give it enough space. The plant also tends to grow more in the spring and early summer and then stops growing as much later in the summer.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669038836383"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669038836383"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b83a21bbc1d1872257314"
+  },
+  "plantType": "Snake Plant",
+  "h2o": "ones per week",
+  "light": "low light",
+  "bio": "Snake plants are good at cleaning the air and grow faster than some common indoor plants. They prefer to be watered from the bottom of the pot so the leaves stay dry. They can tolerate most light conditions.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669039010029"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669039010029"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b83fc1bbc1d1872257316"
+  },
+  "plantType": "Schefflera",
+  "h2o": "ones per week",
+  "light": "indirect light",
+  "bio": "In the right spot, Schefflera will grow faster than most other common indoor trees. It prefers bright, indirect sunlight but can also tolerate some direct sun. Schefflera is drought tolerant but does not like to be overwatered.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669039100656"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669039100656"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b844f1bbc1d1872257318"
+  },
+  "plantType": "Cast Iron Plant",
+  "h2o": "ones per week",
+  "light": "low light",
+  "bio": "This plant, also known as an aspidistra, has been popular for decades. It is known for being indestructible and is a great plant to put in a dark corner. It is also very resistant to common house plant pests and diseases.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669039183337"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669039183337"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b84a11bbc1d187225731a"
+  },
+  "plantType": "Succulents",
+  "h2o": "ones per month",
+  "light": "direct light",
+  "bio": "Succulents are not a good choice for people who are not willing to put in a lot of effort, as they require a lot of light, regular watering, and special soil, fertilizer, and a terracotta pot. Some varieties are more forgiving than others, but all succulents require special care.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669039265236"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669039265236"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b85021bbc1d187225731c"
+  },
+  "plantType": "Banana Plants",
+  "h2o": "twice per week",
+  "light": "direct light",
+  "bio": "These plants need bright, indirect light and regular watering to thrive. They are heavy feeders, so fertilize them every two weeks during the growing season.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669039362220"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669039362220"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b854c1bbc1d187225731e"
+  },
+  "plantType": "Carnivorous Plants",
+  "h2o": "ones per day",
+  "light": "indirect light",
+  "bio": "You might want to try a carnivorous plant garden if you are looking for something different. Venus flytraps, sundews, and pitcher plants can all be grown indoors and will help to keep gnats under control. These plants prefer bright sunlight but will need to be watered almost every day. It is also important to note that carnivorous plants typically die back completely during the winter months. They will grow again in the spring, but if you have limited space, a plant that stays green year-round might be a better option for you.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669039436210"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669039436210"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b85b31bbc1d1872257320"
+  },
+  "plantType": "Other",
+  "bio": "",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669039539467"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669039539467"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637bfbe34c80f9fcf309394c"
+  },
+  "plantType": "Test Cloud Database",
+  "h2o": "once per day",
+  "light": "direct light",
+  "bio": "Test Cloud Database",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669069795791"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669069795791"
+    }
+  },
+  "__v": 0
+}]

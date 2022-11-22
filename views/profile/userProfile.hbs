@@ -6,3 +6,7 @@
 {{else}}
   <p>Still no logged in user, sorry!</p>
 {{/if}}
+
+    <form id="logout-form" class="navbar-nav ml-auto" action="/auth/logout" method="GET">
+      <button class="btn btn-outline-success my-2 my-sm-0" id="logout">Logout</button>
+    </form>

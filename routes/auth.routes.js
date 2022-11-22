@@ -81,12 +81,12 @@ router.post("/signup", isLoggedOut, (req, res) => {
 });
 
 // GET /auth/login
-router.get("/login", isLoggedOut, (req, res) => {
+router.get("/login", (req, res) => {
   res.render("auth/login");
 });
 
 // POST /auth/login
-router.post("/login", isLoggedOut, (req, res, next) => {
+router.post("/login", (req, res, next) => {
   const { username, email, password } = req.body;
 
   // Check that username, email, and password are provided
@@ -134,7 +134,7 @@ router.post("/login", isLoggedOut, (req, res, next) => {
           // Remove the password field
           delete req.session.currentUser.password;
 
-          res.redirect("auth/userProfile");
+          res.redirect("/auth/userProfile");
         })
         .catch((err) => next(err)); // In this case, we send error handling to the error handling middleware.
     })
@@ -147,16 +147,14 @@ router.get('/userProfile', isLoggedIn, (req, res) => {
 });
 
 // GET /auth/logout
-router.get("/logout", isLoggedIn, (req, res) => {
+router.get("/logout", (req, res, next) => {
   req.session.destroy((err) => {
-    if (err) {
-      res.status(500).render("auth/logout", { errorMessage: err.message });
-      return;
-    }
+    if (err) next(err)
+      // res.status(500).render("/auth/logout", { errorMessage: err.message });
+      // return;
     res.redirect("/");
   });
 });
-
 
 
 module.exports = router;
