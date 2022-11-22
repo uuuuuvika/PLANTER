@@ -9,8 +9,11 @@ a {
   font-size: 1.5em;
 }
 
-form {
+.form{
   margin: 30px auto;
+
+}
+form {
   width: 380px;
 }
  
@@ -59,6 +62,7 @@ form button:hover {
 }
 
 #login-form {
-  font-size: 1em;
-} 
-
+  margin: 0px;
+  width: auto;
+  
+}

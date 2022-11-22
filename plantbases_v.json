@@ -1,0 +1,378 @@
+[{
+  "_id": {
+    "$oid": "637b77adb1e8ddff481dc4a7"
+  },
+  "plantType": "Asparagus Fern",
+  "h2o": "twice per week",
+  "light": "direct light",
+  "bio": "Asparagus ferns appreciate regular feeding in the summer months, but not during the winter. Fertilise once a month with a fertiliser for leafy plants at half the recommended strength.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669035949991"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669035949991"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b7b22f77de4ed15d73ebd"
+  },
+  "plantType": "Chinese Evergreen",
+  "h2o": "ones per week",
+  "light": "indirect light",
+  "bio": "Just don't overwater it:)",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669036834372"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669036834372"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b7de073ac5e2796322410"
+  },
+  "plantType": "Monstera",
+  "light": "indirect light",
+  "bio": "Be cool and get Montsera !",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669037536274"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669037536274"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b7f5a73ac5e2796322412"
+  },
+  "plantType": "Maranta Prayer Plant",
+  "h2o": "ones per week",
+  "light": "low light",
+  "bio": "Difficult one! Loves humidity, but watch out: If you overwater your plant, the tips of the leaves will turn brown.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669037914038"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669037914038"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b80dfdebd286d94ed0fd3"
+  },
+  "plantType": "Parlor Palm",
+  "h2o": "once per week",
+  "light": "indirect light",
+  "bio": "Remember: it is a slooooooooooow growing plant...",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669038303094"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669038303094"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b813edebd286d94ed0fd5"
+  },
+  "plantType": "Pothos",
+  "h2o": "once per week",
+  "light": "indirect light",
+  "bio": "Survivor, will probably forgive you your mistakes.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669038398374"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669038398374"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b81a2debd286d94ed0fd7"
+  },
+  "plantType": "Fiddle Leaf Fig",
+  "h2o": "twice per week",
+  "light": "indirect light",
+  "bio": "Sensitive to drafts and temperature changes, loves humidity and indirect sunlight.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669038498673"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669038498673"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b8207debd286d94ed0fd9"
+  },
+  "plantType": "Guiana Chestnut",
+  "h2o": "once per month",
+  "light": "indirect light",
+  "bio": "Kinda immune to overwatering",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669038599669"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669038599669"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b8245debd286d94ed0fdb"
+  },
+  "plantType": "Alocasia",
+  "h2o": "twice per week",
+  "light": "low light",
+  "bio": "High humidity, please !!",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669038661098"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669038661098"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b8298debd286d94ed0fdd"
+  },
+  "plantType": "Yucca",
+  "h2o": "once per week",
+  "light": "direct light",
+  "bio": "Be careful with this spiky leafs!",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669038744212"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669038744212"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b82cedebd286d94ed0fdf"
+  },
+  "plantType": "African Violets",
+  "h2o": "twice per week",
+  "light": "indirect light",
+  "bio": "Particularly loves warmth...",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669038798509"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669038798509"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b831ddebd286d94ed0fe1"
+  },
+  "plantType": "Peperomia",
+  "h2o": "once per week",
+  "light": "indirect light",
+  "bio": "...",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669038877217"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669038877217"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b83cddebd286d94ed0fe3"
+  },
+  "plantType": "Air Plant",
+  "h2o": "once per week",
+  "light": "indirect light",
+  "bio": "Don’t need soil. SPRAY it with water.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669039053884"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669039053884"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b8457debd286d94ed0fe5"
+  },
+  "plantType": "Spider Plant",
+  "h2o": "once per week",
+  "light": "indirect light",
+  "bio": "...",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669039191056"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669039191056"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b848edebd286d94ed0fe7"
+  },
+  "plantType": "Bird’s Nest Fern",
+  "h2o": "twice per week",
+  "light": "low light",
+  "bio": "It needs soil that is constantly moist but never waterlogged.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669039246407"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669039246407"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b84dddebd286d94ed0fe9"
+  },
+  "plantType": "Peace Lily",
+  "h2o": "once per week",
+  "light": "indirect light",
+  "bio": "Mist it regularly, give a looooot of light and a monthly feed.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669039325856"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669039325856"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b851cdebd286d94ed0feb"
+  },
+  "plantType": "Aloe",
+  "h2o": "once per month",
+  "light": "indirect light",
+  "bio": "Allow an aloe to go without water for a while, but when you do water it, make sure to give it a good soaking.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669039388221"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669039388221"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b8557debd286d94ed0fed"
+  },
+  "plantType": "English Ivy",
+  "h2o": "twice per week",
+  "light": "low light",
+  "bio": "It doesn't matter if it's in a warm or cold part of your home, as long as the temperature doesn't change too much.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669039447728"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669039447728"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b8582debd286d94ed0fef"
+  },
+  "plantType": "Dragon Tree",
+  "h2o": "once per week",
+  "light": "indirect light",
+  "bio": "...",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669039490710"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669039490710"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637b8a272a844a2ebfbdf358"
+  },
+  "plantType": "other",
+  "bio": "",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1669040679872"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669040679872"
+    }
+  },
+  "__v": 0
+}]
