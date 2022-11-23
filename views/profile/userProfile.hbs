@@ -1,76 +1,65 @@
 {{#if foundedUser}}
 <h2>Welcome, {{ foundedUser.username }}!</h2>
-<p>This is your profile page my friend!</p>
+<p>here you can check your plants / upload new ones / and truck when to water them</p>
 
-<h2>Create an uniqe plant: </h2>
-<form action="/createUniqe" method="POST">
+<div class="popup" onclick="myFunction()"><button>CLICK TO CREATE NEW PLANT</button>
 
-  <label for="name">Name: </label>
-  <input type="text" name="name" id="name">
+ <div class="popuptext" id="myPopup">
+  <form action="/createUniqe" method="POST">
 
-  <label for="plantType">Type: </label>
-  <input type="text" name="plantType" id="plantType">
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name">
 
-  <label for="h2o">h2o: </label>
-  <label for="once-per-day">once per day</label><br>
-  <input type="radio" id="once-per-day" name="h2o" value="once per day">
+    <label for="plantType">Type: </label>
+    <input type="text" name="plantType" id="plantType">
 
-  <label for="once-per-week">once per week</label><br>
-  <input type="radio" id="once-per-week" name="h2o" value="once per week">
+    <label for="h2o">h2o: </label>
+    <label for="once-per-day">once per day</label><br>
+    <input type="radio" id="once-per-day" name="h2o" value="once per day">
 
-  <label for="twice-per-week">twice per week</label><br>
-  <input type="radio" id="twice-per-week" name="h2o" value="twice per week">
+    <label for="once-per-week">once per week</label><br>
+    <input type="radio" id="once-per-week" name="h2o" value="once per week">
 
-  <label for="once-per-month">once per month</label><br>
-  <input type="radio" id="once-per-month" name="h2o" value="once per month">
+    <label for="twice-per-week">twice per week</label><br>
+    <input type="radio" id="twice-per-week" name="h2o" value="twice per week">
 
-
-  <label for="light">light: </label>
-  <label for="low-light">low light</label><br>
-  <input type="radio" id="low-light" name="light" value="low light">
-
-  <label for="direct-light">direct light</label><br>
-  <input type="radio" id="direct-light" name="light" value="direct light">
-
-  <label for="indirect-light">indirect light</label><br>
-  <input type="radio" id="indirect-light" name="light" value="indirect light">
+    <label for="once-per-month">once per month</label><br>
+    <input type="radio" id="once-per-month" name="h2o" value="once per month">
 
 
-  <label for="bio">BIO: </label>
-  <input type="text" name="bio" id="bio">
+    <label for="light">light: </label>
+    <label for="low-light">low light</label><br>
+    <input type="radio" id="low-light" name="light" value="low light">
 
-  <button type="submit">Add PLANT</button>
-</form>
+    <label for="direct-light">direct light</label><br>
+    <input type="radio" id="direct-light" name="light" value="direct light">
+
+    <label for="indirect-light">indirect light</label><br>
+    <input type="radio" id="indirect-light" name="light" value="indirect light">
 
 
-<h2>Choose plant from existing:</h2>
+    <label for="bio">BIO: </label>
+    <input type="text" name="bio" id="bio">
 
+    <button type="submit" onclick="myFunction2()">Add PLANT</button>
+  </form>
+</div>
+</div>
+
+<div id="cheat">
 <form action='/choosePlant' method="POST">
-
-    {{!-- <label for="name">Name</label>
-    <input type="text" id="name" name="name"><br><br> --}}
-
-    <label for="myPlants">Plant:</label> 
+    <label for="myPlants">plantcare cheatsheet:</label> 
     <select name="myPlants" id="myPlants" aria-label="Choose your plant">
-      <option selected></option>
         {{#each allPlants}}
         <option value="{{_id}}">{{plantType}}</option>
-        {{/each}}
-        
+        {{/each}}  
     </select>  
-    <input type="submit" value="Submit">
+    <input id="cheat-btn" type="submit" value="spy">
 </form>
+</div>
 
-   {{!-- <label for="course" class="form-label">Choose your course:</label>
-    <select name="course" class="form-select form-select-md-6 mb-3" aria-label="Choose your course">
-      <option selected></option>
-      <option value="Web Development">Web Development</option>
-      <option value="Data Analitcs">Data Analitcs</option>
-      <option value="UX UI">UX UI</option>
-    </select> --}}
 
 {{else}}
-
   <p>Still no logged in user, sorry!</p>
 {{/if}}
 
