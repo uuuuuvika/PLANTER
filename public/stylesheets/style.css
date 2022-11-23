@@ -1,6 +1,8 @@
 body {
   padding: 50px;
   font-family: monospace;
+  font-size: 18px;
+  background-image: url('../images/flower.png');
 }
 
 a {
@@ -36,9 +38,9 @@ form button {
 }
  
 form button {
-  background: #009f25;
-  border: 1px solid #43a3e6;
-  border-radius: 30px;
+  background: black;
+  border: 1px solid #0c1a0b;
+  border-radius: 10px;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -52,7 +54,7 @@ form button {
  
 form button:hover {
   background: #fff;
-  color: #e643cb;
+  color: #ae2932;
   transition: 0.3s ease background;
 }
 
@@ -125,3 +127,13 @@ form button:hover {
   font-size: 1em;
   border-radius: 26px;
 }
+
+#map{
+  height:50vh;
+  width: 27.5 vw;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border: #0c1a0b 3px solid;
+}
+
+

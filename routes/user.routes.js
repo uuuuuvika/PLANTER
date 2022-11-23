@@ -55,6 +55,7 @@ router.post('/createUniqe', (req, res) => {
 
 
 //CHOOSE FROM EXISTING AND DISPLAY TIPS
+
 router.post('/choosePlant', (req, res) => {
   const { myPlants } = req.body;
   const user = req.session.currentUser;
