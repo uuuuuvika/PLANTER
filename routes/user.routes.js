@@ -18,7 +18,9 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 // USER PROFILE + get all plants
 router.get("/userProfile", isLoggedIn, (req, res) => {
     PlantBase.find().limit(20) //CHAMGE WHEN WE MERGE OUR DATABASE
+    const user = req.session.currentUser
         .then(allPlants => {
+
             let count = 0;
             console.log(allPlants);
             res.render('profile/userProfile.hbs', { allPlants: allPlants,

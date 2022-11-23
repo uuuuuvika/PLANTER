@@ -5,17 +5,25 @@ const PlantBase = require('../models/PlantBase.model');
 const Event = require('../models/Event.model');
 const isLoggedIn = require('../middleware/isLoggedIn');
 
-/* GET home page */
+
+// GET ALL EVENTS ON INDEX
 router.get("/", (req, res, next) => {
-  res.render("index");
+  Event.find()
+  .then(allEvents => {
+    res.render("index", {showEvents: allEvents})
+
+  })
+  .catch(error => console.log('error!!! YOU SUCK INDEX'));
 });
+
+
 
 router. get("/plantBase/create", (req, res) => res.render("plantbase.hbs"))
 
 router.post('/plantBase/create', (req, res) => {
 
   const {plantType, h2o, light, bio} = req.body;
-
+  
   PlantBase.create({plantType, h2o, light, bio})
   .then((result) => console.log(result))
   .then(() => res.redirect('/plantBase/create'))
@@ -44,10 +52,11 @@ router.post('/event/create', isLoggedIn, (req, res)=>{
 // GET FIND AND EDIT THE EVENT
 // FIND
 
-router.get('/userProfil',isLoggedIn, (req, res) =>{
+router.get('/event',isLoggedIn, (req, res) =>{
   Event.find({createdBy:req.session.currentUser._id})
   .then((result)=> {
-    res.render('/userProfil', {result})
+    console.log(result);
+    // res.render('/', {result})
   })
   .catch(error => console.log('error!!! YOU STILL STILL SUCK', error));
 })
@@ -55,7 +64,8 @@ router.get('/userProfil',isLoggedIn, (req, res) =>{
 // DISLPLAY
 // ClICK AND EDIT
 
-// GET ALL EVENTS
+
+router.get
 
 router.get('')
 module.exports = router;
