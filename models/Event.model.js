@@ -1,19 +1,8 @@
 const { Schema, model } = require("mongoose");
 
 const eventSchema = new Schema(
-    {
-    // organizer: {
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'User',
-    //     required: true
-    // },
-    participants: [
-        {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-    }
-],  
-    invitetedUsers: [
+    { 
+    createdBy: [
         {
         type: Schema.Types.ObjectId,
         ref: 'User'
