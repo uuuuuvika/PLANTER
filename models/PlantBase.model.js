@@ -31,11 +31,11 @@ const plantBaseSchema = new Schema(
       ref: 'User',
       require: false
     },
-    adoptedBy: [{
-      type: Schema.Types.ObjectId, // or default 
-      ref: 'User',
-      require: false
-    }]
+    // adoptedBy: [{
+    //   type: Schema.Types.ObjectId, // or default 
+    //   ref: 'User',
+    //   require: false
+    // }]
   },
   {
     timestamps: true,

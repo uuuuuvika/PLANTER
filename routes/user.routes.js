@@ -30,18 +30,6 @@ router.get("/userProfile", isLoggedIn, (req, res) => {
 });
   
 
-//LIST ALL PLANTS from PlantBase on CONSOLE 
-// router.get("/choosePlant", isLoggedIn, (req, res) => {
-//     PlantBase.find()
-//         .then(allPlants => {
-//             console.log(allPlants);
-//             res.render('profile/userProfile.hbs', { allPlants: allPlants }); //allPlants is temporary!!
-//         })
-//         .catch((error) => {
-//             console.log("Error while getting plants from DB")
-//         });
-// })
-
 //CREATE "THE COSTUME ONE"
 router.post('/createUniqe', (req, res) => {
 
@@ -66,9 +54,18 @@ router.post('/createUniqe', (req, res) => {
 })
 
 
-//CHOOSE FROM EXISTING
+//CHOOSE FROM EXISTING AND DISPLAY TIPS
 router.post('/choosePlant', (req, res) => {
   const { myPlants } = req.body;
+  const user = req.session.currentUser;
+  console.log(user);
+  PlantBase.findById(myPlants)
+  .then((plant) => {
+    console.log(plant)
+    res.render('allplants.hbs', { plant: plant})
+  })
+  .catch(error => console.log("Error! YOU SUCK!"));
+
     // const { name, myPlants } = req.body;
     // const num = Math.random()*1000;
     // const user = req.session.currentUser;
@@ -92,15 +89,10 @@ router.post('/choosePlant', (req, res) => {
     //             } else {
     //               res.redirect('/userProfile');
     //             }
-    //           })
-        
+    //           }) 
     // })
     // .catch(error => console.log("Error! YOU SUCK!"));
 
 })
-
-
-// create one (fofm which will extract id )based on spotify lab
-
 
 module.exports = router;
