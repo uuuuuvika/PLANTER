@@ -9,7 +9,6 @@ const plantBaseSchema = new Schema(
     plantType: {
         type: String,
         required: true, 
-        unique: true, 
         trim: true
     }, 
     h2o: {

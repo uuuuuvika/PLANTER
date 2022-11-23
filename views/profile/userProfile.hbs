@@ -45,6 +45,30 @@
 
 <h2>Choose plant from existing:</h2>
 
+<form action='/choosePlant' method="POST">
+
+    {{!-- <label for="name">Name</label>
+    <input type="text" id="name" name="name"><br><br> --}}
+
+    <label for="myPlants">Plant:</label> 
+    <select name="myPlants" id="myPlants" aria-label="Choose your plant">
+      <option selected></option>
+        {{#each allPlants}}
+        <option value="{{_id}}">{{plantType}}</option>
+        {{/each}}
+        
+    </select>  
+    <input type="submit" value="Submit">
+</form>
+
+   {{!-- <label for="course" class="form-label">Choose your course:</label>
+    <select name="course" class="form-select form-select-md-6 mb-3" aria-label="Choose your course">
+      <option selected></option>
+      <option value="Web Development">Web Development</option>
+      <option value="Data Analitcs">Data Analitcs</option>
+      <option value="UX UI">UX UI</option>
+    </select> --}}
+
 {{else}}
 
   <p>Still no logged in user, sorry!</p>
