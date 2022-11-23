@@ -18,14 +18,20 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 // USER PROFILE + get all plants
 router.get("/userProfile", isLoggedIn, (req, res) => {
     PlantBase.find().limit(20) //CHAMGE WHEN WE MERGE OUR DATABASE
-    const user = req.session.currentUser
+    // const user = req.session.currentUser
         .then(allPlants => {
 
             let count = 0;
-            console.log(allPlants);
-            res.render('profile/userProfile.hbs', { allPlants: allPlants,
-                                                    foundedUser: req.session.currentUser });
-        })
+            // console.log(allPlants);
+            // res.render('profile/userProfile.hbs', { allPlants: allPlants,
+            //                                         foundedUser: req.session.currentUser });
+            
+            PlantBase.find({createdBy:req.session.currentUser._id})
+            .then((UserPlants)=> {
+              console.log("plants: ", UserPlants);
+              res.render('profile/userProfile.hbs', {UserPlants: UserPlants, allPlants: allPlants, foundedUser: req.session.currentUser})
+            })
+          })
         .catch((error) => {
             console.log("Error while getting plants from DB")
         });

@@ -110,6 +110,7 @@ router.post("/login", (req, res, next) => {
   // Search the database for a user with the email submitted in the form
   User.findOne({ email })
     .then((user) => {
+      console.log("user:", user)
       // If the user isn't found, send an error message that user provided wrong credentials
       if (!user) {
         res
@@ -135,6 +136,7 @@ router.post("/login", (req, res, next) => {
           delete req.session.currentUser.password;
 
 
+          console.log(req.session.currentUser)
           res.redirect("/userProfile"); // maybe add auth again !!!!!
         })
         .catch((err) => next(err)); // In this case, we send error handling to the error handling middleware.
