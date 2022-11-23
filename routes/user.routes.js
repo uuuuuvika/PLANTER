@@ -17,15 +17,16 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 
 // USER PROFILE + get all plants
 router.get("/userProfile", isLoggedIn, (req, res) => {
-    PlantBase.find().limit(20) //CHAMGE WHEN WE MERGE OUR DATABASE
+    const user = req.session.currentUser;
+    PlantBase.find().limit(20)                                              //CHANGE to 40 WHEN WE MERGE OUR DATABASE
         .then(allPlants => {
-            let count = 0;
-            console.log(allPlants);
+            console.log(user);
             res.render('profile/userProfile.hbs', { allPlants: allPlants,
-                                                    foundedUser: req.session.currentUser });
+                                                    foundedUser: user });
         })
+        
         .catch((error) => {
-            console.log("Error while getting plants from DB")
+            console.log("Error while getting plants from DB");
         });
 });
   
@@ -39,6 +40,7 @@ router.post('/createUniqe', (req, res) => {
     PlantBase.create({ name, plantType, h2o, light, bio, createdBy: user._id } )
     .then((result) => {
         console.log(result);
+        console.log(result.createdAt)
         console.log("USERR!!!",user._id)
         User.findByIdAndUpdate(user._id, {$push: {myPlants: result} },
             function(err, result) {
@@ -47,8 +49,7 @@ router.post('/createUniqe', (req, res) => {
                 } else {
                   res.redirect('/userProfile');
                 }
-              })
-        
+              })    
     })
     .catch(error => console.log("Error! YOU SUCK!"));
 })
