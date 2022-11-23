@@ -5,6 +5,8 @@ require("dotenv").config();
 // ℹ️ Connects to the database
 require("./db");
 
+//get cron for time
+// const cron = require('node-cron');
 
 // Handles http requests (express is node js framework)
 // https://www.npmjs.com/package/express
@@ -23,7 +25,10 @@ const capitalize = require("./utils/capitalize");
 const projectName = "PLANTER";
 app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`;
 
-//GONNA MAKE AN ALGORYTHM HERE
+//WHATERING ALGORYTHM HERE
+// cron.schedule('* * * * *', () => {
+//     console.log('running a task every minute');
+//   });
 
 // 👇 Start handling routes here
 const indexRoutes = require("./routes/index.routes");
