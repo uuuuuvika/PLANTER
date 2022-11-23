@@ -1,9 +1,30 @@
+<div class="container-intro">
 {{#if foundedUser}}
 <h2>Welcome, {{ foundedUser.username }}!</h2>
+
+{{#each UserPlants}}
+<h3>Here are your plants:</h3>
+
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="images/greenbar.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <p class="card-text">{{plantType}}</p>
+    <p class="card-text">{{h2o}}</p>
+    <p class="card-text">{{light}}</p>
+     <p class="card-text">{{bio}}</p>
+     <p class="card-text">{{createdAt}}</p>
+
+  </div>
+</div>
+
+
+{{/each}}
 <p>here you can check your plants / upload new ones / and truck when to water them</p>
 <p>{{foundedUser.myPlants}}</p>
 
-<div class="popup" onclick="myFunction()"><button>CLICK TO CREATE NEW PLANT</button>
+<div class="popup" onclick="myFunction()"><button class="button button:hover">CLICK TO CREATE NEW PLANT</button>
 
  <div class="popuptext" id="myPopup">
   <form action="/createUniqe" method="POST">
@@ -67,3 +88,4 @@
     <form id="logout-form" class="navbar-nav ml-auto" action="/auth/logout" method="GET">
       <button class="btn btn-outline-success my-2 my-sm-0" id="logout">Logout</button>
     </form>
+</div>
