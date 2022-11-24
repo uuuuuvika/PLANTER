@@ -1,22 +1,19 @@
 <div class="container-intro">
 {{#if foundedUser}}
-<h2>Welcome, {{ foundedUser.username }}!</h2>
+<h2>Hey, {{ foundedUser.username }}!</h2>
 <h3>Here are your plants:</h3>
 {{#each plantArr}}
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="images/greenbar.png" alt="Card image cap">
+<div class="card {{#if water}} red {{/if}} plants" style="width: 18rem;">
+  {{!-- <img class="card-img-top" src="images/greenbar.png" alt="Card image cap"> --}}
   <div class="card-body">
     <h5 class="card-title">{{_doc.name}}</h5>
-    <p class="water {{#if water}} red {{/if}}">{{water}}</p>
     <p class="card-text">{{_doc.plantType}}</p>
     <p class="card-text">{{_doc.h2o}}</p>
     <p class="card-text">{{_doc.light}}</p>
     <p class="card-text">{{_doc.bio}}</p>
-    <p class="card-text">{{_doc.createdAt}}</p>
   </div>
 </div>
 {{/each}}
-
 
 <div class="popup" onclick="myFunction()"><button class="button button:hover">CLICK TO CREATE NEW PLANT</button>
 
@@ -73,7 +70,6 @@
     <input id="cheat-btn" type="submit" value="spy">
 </form>
 </div>
-
 
 {{else}}
   <p>Still no logged in user, sorry!</p>
