@@ -19,6 +19,7 @@ router.get("/", (req, res, next) => {
 
 
 
+
 router. get("/plantBase/create", (req, res) => res.render("plantbase.hbs"))
 
 router.post('/plantBase/create', fileUploader.single('yourPlant'), (req, res) => {
@@ -37,20 +38,33 @@ router.post('/plantBase/create', fileUploader.single('yourPlant'), (req, res) =>
 // GET
 router.get("/event/create", (req, res) => res.render("event.hbs"))
 
+
 /////EVENTS/////
 // POST CREATE EVENT
 router.post('/event/create', isLoggedIn, (req, res)=>{
-
+  
   const {date, name, coordinates,description} = req.body;
   const createdBy = req.session.currentUser._id
   console.log(req.session.currentUser);
-
+  
   Event.create({date, name, createdBy, coordinates, description})
-
+  
   .then(() => res.redirect('/event/create'))
   .catch(error => console.log('error!!! YOU STILL SUCK', error));
 })
 
+// Show Eventdetail on extra page
+router.get('/eventdetail/:id',(req,res) => {
+  const id = req.params.id
+  
+  Event.findById(id)
+  .then(selectedEvent => {
+    res.render('eventdetail', {selectedEvent})
+  })
+  .catch(err => {
+    console.log(err)
+})
+})
 // GET FIND AND EDIT THE EVENT
 // FIND
 
