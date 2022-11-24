@@ -12,6 +12,7 @@ const eventSchema = new Schema(
     name: String,
     description: String,
     coordinates: String,
+    picture: String,
 }
 );
 

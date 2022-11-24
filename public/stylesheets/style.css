@@ -128,7 +128,7 @@ form button:hover {
   border-radius: 26px;
 }
 
-#map{
+.map{
   height:50vh;
   width: 27.5 wv;
   margin-top: 10px;
@@ -244,14 +244,12 @@ ul.topnav li.right {float: right;}
   ul.topnav li {float: none;}
 }
 
-/* #hideco{
+#hideco{
   display: none;
-} */
+}
 
 
 .eventdetail{
   text-align: center;
-  height: 90vh;
-  width: 90vw;
   margin-top: 20px;
 }

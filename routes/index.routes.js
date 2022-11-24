@@ -41,13 +41,14 @@ router.get("/event/create", (req, res) => res.render("event.hbs"))
 
 /////EVENTS/////
 // POST CREATE EVENT
-router.post('/event/create', isLoggedIn, (req, res)=>{
+router.post('/event/create', isLoggedIn, fileUploader.single('picture'), (req, res)=>{
   
   const {date, name, coordinates,description} = req.body;
+  const picture = req.file.path
   const createdBy = req.session.currentUser._id
   console.log(req.session.currentUser);
   
-  Event.create({date, name, createdBy, coordinates, description})
+  Event.create({date, name, createdBy, picture, coordinates, description})
   
   .then(() => res.redirect('/event/create'))
   .catch(error => console.log('error!!! YOU STILL SUCK', error));

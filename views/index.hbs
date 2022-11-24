@@ -1,4 +1,7 @@
 <div class="container-intro">
+
+    <img src="{{session.currentUser.picture}}" alt="">
+    <div>{{session.currentUser.username}}</div>
     <div>
         <h4>Your plant care and baby plant swap app</h4>
         <p>This app will help you take care of your plants by reminding you when to water them.
@@ -11,6 +14,8 @@
         <h2 class="h2">Upcomming events:</h2>
         </div>
 <div class="containerflex">
+
+    
  
 {{#each showEvents}}
 
