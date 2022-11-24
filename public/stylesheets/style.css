@@ -130,7 +130,7 @@ form button:hover {
 
 #map{
   height:50vh;
-  width: 27.5 vw;
+  width: 27.5 wv;
   margin-top: 10px;
   margin-bottom: 30px;
   border: #0c1a0b 3px solid;
@@ -163,6 +163,7 @@ form button:hover {
 height: 100vh;
 width: 100vw;
 margin-top: 20px;
+margin-left: 25px;
 }
 
 .containerflex{
@@ -180,6 +181,13 @@ margin-top: 20px;
   margin-bottom: 15px;
 }
 
+.shortbtn{
+  width: 200px
+}
+#logo{
+  height: 40px;
+}
 .red {
   color: tomato;
 }
+
