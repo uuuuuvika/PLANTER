@@ -1,10 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
-const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
+var cron = require('node-cron');
+var moment = require('moment');
 
-// Getting our Schemas (all of them just to be sure)
+const mongoose = require("mongoose");
+
 const User = require("../models/User.model");
 const PlantBase = require("../models/PlantBase.model");
 
@@ -12,30 +13,57 @@ const PlantBase = require("../models/PlantBase.model");
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
-//const { populate } = require("../models/User.model");
-//const { request } = require("../app");
 
 // USER PROFILE + get all plants
 router.get("/userProfile", isLoggedIn, (req, res) => {
-    PlantBase.find().limit(20) //CHAMGE WHEN WE MERGE OUR DATABASE
-        .then(allPlants => {
-
-            let count = 0;
-          
-            // Event.find({createdBy:req.session.currentUser._id})
-            // .then((UserEvents)=> {
-
-            // })
-
-            PlantBase.find({createdBy:req.session.currentUser._id})
-            .then((UserPlants)=> {
-              console.log("plants: ", UserPlants);
-              res.render('profile/userProfile.hbs', {UserPlants: UserPlants, allPlants: allPlants, foundedUser: req.session.currentUser})
-            })
-          })
-        .catch((error) => {
-            console.log("Error while getting plants from DB")
-        });
+  
+  PlantBase.find().limit(20) //CANGE THIS NUMBER WHEN WE MERGE OUR DATABASE
+    .then(allPlants => {
+      PlantBase.find({ createdBy: req.session.currentUser._id })
+        .then((UserPlants) => {
+          const arrayWithWater = [];
+          UserPlants.forEach((el, index) => {
+            arrayWithWater.push({ ...el, water: false });
+            const created = (el.createdAt).getDay();
+            const createdMonth = (el.createdAt).getDate();
+            const monthDay = moment().date();
+            const dayOfWeek = moment().isoWeekday();
+            const secondDay = moment().add(3, 'days').isoWeekday();
+            //console.log(dayOfWeek)
+            //console.log(secondDay)
+            //console.log(created); 
+            //console.log(timePassed);
+            //console.log(createdMonth)
+            //console.log(monthDay)
+            let water = arrayWithWater[index].water;
+            function waterYes() {
+              water = true;
+              arrayWithWater[index].water = water;
+            }
+            function waterNo() {
+              water = false;
+              arrayWithWater[index].water = water;
+            }
+            if (el.h2o === "once per day") waterYes();
+            else if (el.h2o === "once per week") {
+              if (dayOfWeek === created) waterYes();
+              else waterNo();
+            }
+            else if (el.h2o === "twice per week") {
+              if (dayOfWeek === created || secondDay === created) waterYes();
+              else waterNo();
+            }
+            else {
+              if (monthDay === createdMonth) waterYes();
+              else waterNo();
+            }
+          }) 
+          res.render('profile/userProfile.hbs', { userPlants: UserPlants, allPlants: allPlants, foundedUser: req.session.currentUser, plantArr: arrayWithWater })
+        })
+    })
+    .catch((error) => {
+      console.log("Error while getting plants from DB");
+    });
 });
   
 
@@ -48,6 +76,7 @@ router.post('/createUniqe', (req, res) => {
     PlantBase.create({ name, plantType, h2o, light, bio, createdBy: user._id } )
     .then((result) => {
         console.log(result);
+        console.log(result.createdAt)
         console.log("USERR!!!",user._id)
         User.findByIdAndUpdate(user._id, {$push: {myPlants: result} },
             function(err, result) {
@@ -56,15 +85,13 @@ router.post('/createUniqe', (req, res) => {
                 } else {
                   res.redirect('/userProfile');
                 }
-              })
-        
+              })    
     })
     .catch(error => console.log("Error! YOU SUCK!"));
 })
 
 
 //CHOOSE FROM EXISTING AND DISPLAY TIPS
-
 router.post('/choosePlant', (req, res) => {
   const { myPlants } = req.body;
   const user = req.session.currentUser;
@@ -75,34 +102,6 @@ router.post('/choosePlant', (req, res) => {
     res.render('allplants.hbs', { plant: plant})
   })
   .catch(error => console.log("Error! YOU SUCK!"));
-
-    // const { name, myPlants } = req.body;
-    // const num = Math.random()*1000;
-    // const user = req.session.currentUser;
-    // console.log(user)
-    // PlantBase.findById(myPlants)
-    // .then((plant) => { 
-    //     console.log(plant)
-    //     return ({name: name, plantType: plant.plantType, h2o: plant.h2o, light: plant.light, bio: plant.bio}); // add adoptedBy
-    // })
-    // // .then((res) => {
-    // //     PlantBase.create(res)
-    // //     //console.log(result)
-    // // })
-    // .then((result) => {
-    //     console.log(result)
-    //     console.log("USERR:",user._id)
-    //     User.findByIdAndUpdate(user._id, { $push: { myPlants: result} },
-    //         function(err, result) {
-    //             if (err) {
-    //               res.send(err);
-    //             } else {
-    //               res.redirect('/userProfile');
-    //             }
-    //           }) 
-    // })
-    // .catch(error => console.log("Error! YOU SUCK!"));
-
 })
 
 module.exports = router;

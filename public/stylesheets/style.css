@@ -184,8 +184,10 @@ margin-left: 25px;
 .shortbtn{
   width: 200px
 }
-
 #logo{
   height: 40px;
+}
+.red {
+  color: tomato;
 }
 
