@@ -1,30 +1,29 @@
 <div class="container-intro">
-    <div>
-        <h4>Your plant care and baby plant swap app</h4>
-        <p>This app will help you take care of your plants by reminding you when to water them.
-<br> You can also use the app to create or find plant swap parties near you. </p>
-<a href="/auth/signup">Signup</a> or <a href="/auth/login">Login</a> to get started!
-       
+  <div class="cont">
+    <h4>Your plant care and baby plant swap app</h4>
+    <p>This app will help you take care of your plants by reminding you when to water them.
+      <br> You can also use the app to create or find plant swap parties near you.</p>
+    <a href="/auth/signup">Signup</a> or <a href="/auth/login">Login</a> to get started!
     </div>
 </div>
-  <div>
-        <h2 class="h2">Upcomming events:</h2>
-        </div>
+<div>
+  <h2 class="h2">Upcomming events:</h2>
+</div>
 <div class="containerflex">
- 
-{{#each showEvents}}
 
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="images/greenbar.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{name}}</h5>
-    <p class="card-text">{{description}}</p>
-    <div>
-        
+  {{#each showEvents}}
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="images/greenbar.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{name}}</h5>
+      <p class="card-text">{{description}}</p>
+      <div>
+
+      </div>
+      <a href="#" class="button button:hover">View Event</a>
     </div>
-    <a href="#" class="button button:hover">View Event</a>
   </div>
-</div>
 
-{{/each}}
+  {{/each}}
 </div>

@@ -4,6 +4,10 @@ body {
   font-size: 18px;
   background-image: url('../images/flower.png');
 }
+#everything {
+  margin: 3%;
+}
+
 
 a {
   color: #129e00;
@@ -161,9 +165,11 @@ form button:hover {
 
 .container-intro{
 height: 100vh;
-width: 100vw;
+/* width: 100vw; */
+/* padding:0 16px; */
 margin-top: 20px;
-margin-left: 25px;
+/* margin-left: 25px;
+margin-right: 25px; */
 }
 
 .containerflex{
@@ -243,3 +249,6 @@ ul.topnav li.right {float: right;}
   ul.topnav li {float: none;}
 }
 
+.cont{
+  padding:0 16px;
+}
