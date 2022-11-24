@@ -1,29 +1,31 @@
 const express = require("express");
 const router = express.Router();
 
-var cron = require('node-cron');
-var moment = require('moment');
+const cron = require('node-cron');
+const moment = require('moment');
 
 const mongoose = require("mongoose");
 
 const User = require("../models/User.model");
 const PlantBase = require("../models/PlantBase.model");
 
-//Getting our middleware
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
 
 // USER PROFILE + get all plants
 router.get("/userProfile", isLoggedIn, (req, res) => {
-  
-  PlantBase.find().limit(20) //CANGE THIS NUMBER WHEN WE MERGE OUR DATABASE
+  PlantBase.find().limit(20) //CANGE THIS NUMBER WHEN WE MERGE OUR DATABASE!!!!
     .then(allPlants => {
       PlantBase.find({ createdBy: req.session.currentUser._id })
         .then((UserPlants) => {
           const arrayWithWater = [];
           UserPlants.forEach((el, index) => {
+            
             arrayWithWater.push({ ...el, water: false });
+            
+            const currentWholeDate = new Date().toLocaleDateString('en-CA');
+            const createdWholeDate = (el.createdAt).toLocaleDateString('en-CA');
             const created = (el.createdAt).getDay();
             const createdMonth = (el.createdAt).getDate();
             const monthDay = moment().date();
@@ -35,6 +37,8 @@ router.get("/userProfile", isLoggedIn, (req, res) => {
             //console.log(timePassed);
             //console.log(createdMonth)
             //console.log(monthDay)
+            //console.log(currentWholeDate)
+            //console.log(createdWholeDate)
             let water = arrayWithWater[index].water;
             function waterYes() {
               water = true;
@@ -44,17 +48,19 @@ router.get("/userProfile", isLoggedIn, (req, res) => {
               water = false;
               arrayWithWater[index].water = water;
             }
-            if (el.h2o === "once per day") waterYes();
-            else if (el.h2o === "once per week") {
+            if (el.h2o === "once per day" && currentWholeDate !== createdWholeDate) {
+              waterYes()
+            }
+            else if (el.h2o === "once per week" && currentWholeDate !== createdWholeDate) {
               if (dayOfWeek === created) waterYes();
               else waterNo();
             }
             else if (el.h2o === "twice per week") {
-              if (dayOfWeek === created || secondDay === created) waterYes();
+              if ((dayOfWeek === created || secondDay === created) && currentWholeDate !== createdWholeDate) waterYes();
               else waterNo();
             }
             else {
-              if (monthDay === createdMonth) waterYes();
+              if (monthDay === createdMonth && currentWholeDate !== createdWholeDate) waterYes();
               else waterNo();
             }
           }) 
@@ -94,12 +100,13 @@ router.post('/createUniqe', (req, res) => {
 //CHOOSE FROM EXISTING AND DISPLAY TIPS
 router.post('/choosePlant', (req, res) => {
   const { myPlants } = req.body;
-  const user = req.session.currentUser;
-  console.log(user);
+  console.log(myPlants)
+  //const user = req.session.currentUser;
+  //console.log(user);
   PlantBase.findById(myPlants)
   .then((plant) => {
     console.log(plant)
-    res.render('allplants.hbs', { plant: plant})
+    res.render('allPlants.hbs', { plant: plant})
   })
   .catch(error => console.log("Error! YOU SUCK!"));
 })
