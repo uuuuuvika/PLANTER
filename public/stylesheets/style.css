@@ -4,6 +4,10 @@ body {
   font-size: 18px;
   background-image: url('../images/flower.png');
 }
+#everything {
+  margin: 3%;
+}
+
 
 a {
   color: #129e00;
@@ -186,10 +190,9 @@ form button:hover {
 
 .container-intro{
 height: 100vh;
-width: 100vw;
+/* width: 100vw; */
+/* padding:0 16px; */
 margin-top: 20px;
-margin-left: 25px;
-margin-right: 25px;
 }
 
 .containerflex{
@@ -267,16 +270,32 @@ ul.topnav li.right {float: right;}
 @media screen and (max-width: 600px) {
   ul.topnav li.right, 
   ul.topnav li {float: none;}
+
+  li.right {
+    display: none;
+  }
+}
+
+
+.cont{
+  padding:0 16px;
+}
+
+#logo {
+  position: relative;
+  margin: 5%;
+  width: 50px;
+  height: auto;
 }
 
 #hideco{
   display: none;
 }
 
-
-.eventdetail{
+.eventdetail {
   text-align: center;
   margin: 20px;
   padding: 20 px;
   width: 400px;
 }
+

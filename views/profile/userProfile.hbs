@@ -1,12 +1,11 @@
-<div class="container-intro">
-<div><img src="{{session.currentUser.picture}}" alt=""></div>
+
+<div class="cont">
 
 {{#if foundedUser}}
 <h2>Hey, {{ foundedUser.username }}!</h2>
 <h3>Here are your plants:</h3>
 
 {{#each plantArr}}
-
 <div class="card {{#if water}} red {{/if}} plants" style="width: 18rem;">
   {{!-- <img class="card-img-top" src="images/greenbar.png" alt="Card image cap"> --}}
   <div class="card-body">
