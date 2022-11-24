@@ -26,3 +26,20 @@ function addMarker(event) {
 }
 
 map.on("click", addMarker)
+
+
+// 1. 
+// let coordinates = document.getElementById(id)
+
+// console.log(coordinates)
+// new mapboxgl.Marker({
+
+//   color: "green",
+// }).setLngLat(coordinates)
+//   .addTo(map)
+
+
+
+
+
+
