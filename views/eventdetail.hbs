@@ -1,16 +1,19 @@
 <div class="eventdetail">
 <h2>{{selectedEvent.name}}</h5>
-<div>
-{{selectedEvent.description}}
-</div>
 <div id="hideco">
    <span>{{selectedEvent.coordinates}}</span>
 </div>
 <div>
-<div>
-  <img src="{{selectedEvent.picture}}" alt="picture-of-event">  
+</div>
+<div class="event-flex">
+<div >
+{{selectedEvent.description}}
+</div>
+<div class="map-event" id='map2'></div>
+<script src="/js/map2.js"></script>
+</div>
 </div>
 
-<div id='map'></div>
-</div>
+<div>
+  <img  class="img-event" src="{{selectedEvent.picture}}" alt="picture-of-event">  
 </div>

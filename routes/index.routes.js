@@ -69,7 +69,7 @@ router.get('/eventdetail/:id',(req,res) => {
 // GET FIND AND EDIT THE EVENT
 // FIND
 
-// router.get('/event/allevents',isLoggedIn, (req, res) =>{
+// router.get('/eventsuser',isLoggedIn, (req, res) =>{
 //   Event.find({createdBy:req.session.currentUser._id})
 //   .then((result)=> {
 //     console.log(result);

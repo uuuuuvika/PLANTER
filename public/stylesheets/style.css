@@ -136,6 +136,31 @@ form button:hover {
   border: #0c1a0b 3px solid;
 }
 
+.event-flex{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.map-event{
+  border: #0c1a0b 3px solid;
+  width: 400px;
+  height: 400px;
+}
+
+.img-event{
+  border: #0c1a0b 3px solid;
+  width: 400px;
+  height: 400px;
+}
+
+.map-div{
+  border: #0c1a0b 3px solid;
+  width: 400px;
+  height: 400px;
+}
+
 .button{
   background: black;
   border: 1px solid #0c1a0b;
@@ -251,5 +276,7 @@ ul.topnav li.right {float: right;}
 
 .eventdetail{
   text-align: center;
-  margin-top: 20px;
+  margin: 20px;
+  padding: 20 px;
+  width: 400px;
 }
