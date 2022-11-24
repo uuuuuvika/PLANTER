@@ -132,12 +132,37 @@ form button:hover {
   border-radius: 26px;
 }
 
-#map{
+.map{
   height:50vh;
   width: 27.5 wv;
   margin-top: 10px;
   margin-bottom: 30px;
   border: #0c1a0b 3px solid;
+}
+
+.event-flex{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.map-event{
+  border: #0c1a0b 3px solid;
+  width: 400px;
+  height: 400px;
+}
+
+.img-event{
+  border: #0c1a0b 3px solid;
+  width: 400px;
+  height: 400px;
+}
+
+.map-div{
+  border: #0c1a0b 3px solid;
+  width: 400px;
+  height: 400px;
 }
 
 .button{
@@ -168,8 +193,6 @@ height: 100vh;
 /* width: 100vw; */
 /* padding:0 16px; */
 margin-top: 20px;
-/* margin-left: 25px;
-margin-right: 25px; */
 }
 
 .containerflex{
@@ -253,6 +276,7 @@ ul.topnav li.right {float: right;}
   }
 }
 
+
 .cont{
   padding:0 16px;
 }
@@ -263,3 +287,15 @@ ul.topnav li.right {float: right;}
   width: 50px;
   height: auto;
 }
+
+#hideco{
+  display: none;
+}
+
+.eventdetail {
+  text-align: center;
+  margin: 20px;
+  padding: 20 px;
+  width: 400px;
+}
+

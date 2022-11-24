@@ -1,5 +1,5 @@
 <div id="form">
-  <form class="form" action="/auth/signup" method="POST">
+  <form class="form" action="/auth/signup" method="POST" enctype="multipart/form-data">
 
     <label> Username
       <input type="text" name="username" placeholder="Your username" />
@@ -12,6 +12,8 @@
     <label> Password
       <input type="password" name="password" placeholder="Your password" />
     </label>
+
+    <input type="file" name="picture"/>
 
     <button type="submit">Sign Up</button>
 

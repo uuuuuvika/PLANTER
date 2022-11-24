@@ -15,14 +15,19 @@ const User = require("../models/User.model");
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
+// Cloudinary
+const { fileUploader } = require('../config/cloudinary.config');
+
 // GET /auth/signup
 router.get("/signup", (req, res) => {
   res.render("auth/signup");
 });
 
 // POST /auth/signup
-router.post("/signup", (req, res) => {
+router.post("/signup", fileUploader.single('picture'),(req, res) => {
   const { username, email, password } = req.body;
+  const picture = req.file.path
+
 
   // Check that username, email, and password are provided
   if (username === "" || email === "" || password === "") {
@@ -61,7 +66,7 @@ router.post("/signup", (req, res) => {
     .then((salt) => bcrypt.hash(password, salt))
     .then((hashedPassword) => {
       // Create a user and save it in the database
-      return User.create({ username, email, password: hashedPassword });
+      return User.create({ username, email,picture, password: hashedPassword });
     })
     .then((user) => {
       res.redirect("/auth/login");
