@@ -247,8 +247,19 @@ ul.topnav li.right {float: right;}
 @media screen and (max-width: 600px) {
   ul.topnav li.right, 
   ul.topnav li {float: none;}
+
+  li.right {
+    display: none;
+  }
 }
 
 .cont{
   padding:0 16px;
+}
+
+#logo {
+  position: relative;
+  margin: 5%;
+  width: 50px;
+  height: auto;
 }
