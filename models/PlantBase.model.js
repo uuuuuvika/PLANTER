@@ -26,6 +26,9 @@ const plantBaseSchema = new Schema(
         required: true,
         trim: true
     },
+    yourPlant:{
+      type: String
+    },
     createdBy: {
       type: Schema.Types.ObjectId,
       ref: 'User',
