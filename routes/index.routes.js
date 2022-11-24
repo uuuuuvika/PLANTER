@@ -4,6 +4,7 @@ const router = express.Router();
 const PlantBase = require('../models/PlantBase.model');
 const Event = require('../models/Event.model');
 const isLoggedIn = require('../middleware/isLoggedIn');
+const { fileUploader } = require('../config/cloudinary.config');
 
 
 // GET ALL EVENTS ON INDEX
@@ -20,11 +21,12 @@ router.get("/", (req, res, next) => {
 
 router. get("/plantBase/create", (req, res) => res.render("plantbase.hbs"))
 
-router.post('/plantBase/create', (req, res) => {
+router.post('/plantBase/create', fileUploader.single('yourPlant'), (req, res) => {
   console.log("create plant")
   const {plantType, h2o, light, bio} = req.body;
+  const yourPlant = req.file.path
   
-  PlantBase.create({plantType, h2o, light, bio})
+  PlantBase.create({plantType, h2o, yourPlant, light, bio})
   .then((result) => console.log("result: ", result))
   .then(() => res.redirect('/plantBase/create'))
   .catch(error => console.log('error:', error))
@@ -52,14 +54,14 @@ router.post('/event/create', isLoggedIn, (req, res)=>{
 // GET FIND AND EDIT THE EVENT
 // FIND
 
-router.get('/event',isLoggedIn, (req, res) =>{
-  Event.find({createdBy:req.session.currentUser._id})
-  .then((result)=> {
-    console.log(result);
-    // res.render('/', {result})
-  })
-  .catch(error => console.log('error!!! YOU STILL STILL SUCK', error));
-})
+// router.get('/event/allevents',isLoggedIn, (req, res) =>{
+//   Event.find({createdBy:req.session.currentUser._id})
+//   .then((result)=> {
+//     console.log(result);
+//     // res.render('/', {result})
+//   })
+//   .catch(error => console.log('error!!! YOU STILL STILL SUCK', error));
+// })
 
 // DISLPLAY
 // ClICK AND EDIT

@@ -2,7 +2,9 @@
 {{#if foundedUser}}
 <h2>Hey, {{ foundedUser.username }}!</h2>
 <h3>Here are your plants:</h3>
+
 {{#each plantArr}}
+
 <div class="card {{#if water}} red {{/if}} plants" style="width: 18rem;">
   {{!-- <img class="card-img-top" src="images/greenbar.png" alt="Card image cap"> --}}
   <div class="card-body">
@@ -12,19 +14,23 @@
     <p class="card-text">{{_doc.light}}</p>
     <p class="card-text">{{_doc.bio}}</p>
   </div>
+  </div>
 </div>
+
 {{/each}}
 
 <div class="popup" onclick="myFunction()"><button class="button button:hover">CLICK TO CREATE NEW PLANT</button>
 
  <div class="popuptext" id="myPopup">
-  <form action="/createUniqe" method="POST">
+  <form action="/plantBase/create" method="POST" enctype="multipart/form-data">
 
     <label for="name">Name: </label>
     <input type="text" name="name" id="name">
 
     <label for="plantType">Type: </label>
     <input type="text" name="plantType" id="plantType">
+
+    <input type="file" name="yourPlant" />
 
     <label for="h2o">h2o: </label>
     <label for="once-per-day">once per day</label><br>
