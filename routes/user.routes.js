@@ -21,7 +21,9 @@ router.get("/userProfile", isLoggedIn, (req, res) => {
         .then((UserPlants) => {
           const arrayWithWater = [];
           UserPlants.forEach((el, index) => {
+            
             arrayWithWater.push({ ...el, water: false });
+            
             const currentWholeDate = new Date().toLocaleDateString('en-CA');
             const createdWholeDate = (el.createdAt).toLocaleDateString('en-CA');
             const created = (el.createdAt).getDay();
@@ -98,12 +100,13 @@ router.post('/createUniqe', (req, res) => {
 //CHOOSE FROM EXISTING AND DISPLAY TIPS
 router.post('/choosePlant', (req, res) => {
   const { myPlants } = req.body;
-  const user = req.session.currentUser;
-  console.log(user);
+  console.log(myPlants)
+  //const user = req.session.currentUser;
+  //console.log(user);
   PlantBase.findById(myPlants)
   .then((plant) => {
     console.log(plant)
-    res.render('allplants.hbs', { plant: plant})
+    res.render('allPlants.hbs', { plant: plant})
   })
   .catch(error => console.log("Error! YOU SUCK!"));
 })
