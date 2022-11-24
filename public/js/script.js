@@ -1,13 +1,18 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event
 document.addEventListener("DOMContentLoaded", () => {
   console.log("PLANTER JS imported successfully!");
-  // const lngLat = document.getElementById('hideco')
-  // const test = lngLat.innerHtml
-  // console.log('test:',test)
+
+  waterF()
 });
 
-
 function myFunction() {
-  var popup = document.getElementById("myPopup");
+  const popup = document.getElementById("myPopup");
   popup.classList.add("show");
 }
+
+function waterF(){
+  const water = document.querySelectorAll(".water");
+  const waterBool = water.innerHTML;
+  console.log(water.innerHTML)
+}
+
