@@ -1,11 +1,14 @@
 <div id="user">
 {{#if foundedUser}}
+<div>
+  <button class="button button:hover"<a href="/auth/logout"></a>Log out</button>
+</div>
 <div class="cont">
   <h2>Hey, {{ foundedUser.username }}!</h2>
-  <p>Here is a space for all your plants<br>
-    simply click <span onclick="openNav()"><a href="#">here</a></span> to add a new one<br>
-    or <span><a href="/auth/logout">here</a></span> to log out<br>
-    you can also consult our plantcare cheatsheet:
+  <h3>Here is a space for all your plants:</h3>
+    <p>
+      Simply <span onclick="openNav()"><a href="#">click</a></span> to add a new one or add a new plant swap <span><a href="/event/create">event</a></span>.<br></p>
+   <p>If you're not sure about the plant care, consult our plantcare cheatsheet:
   </p>
   <div class="one">
     <form action='/choosePlant' method="POST">

@@ -13,7 +13,7 @@ body {
   height: 100vw;
   background-color: #ffffff;
   opacity: 85%;
-  border-radius: 35px;
+  border-radius: 15px;
 }
 #user p {
   opacity: 100%;
@@ -24,7 +24,7 @@ a {
   font-size: 1.5em;
 }
 h2 {
-  margin: 4%;
+  /* margin: 4%; */
 }
 .form{
   margin: 30px auto;
@@ -50,12 +50,13 @@ form button {
   padding: 4px;
   width: 100%;
   margin-bottom: 20px;
+
 }
  
 form button {
   background: black;
   border: 1px solid #0c1a0b;
-  border-radius: 10px;
+  border-radius: 15px;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -142,19 +143,44 @@ form button:hover {
   justify-content: space-between;
 }
 
-#cheat-btn {
+/* #cheat-btn {
   width: auto;
   margin: 1%;
   background-color: #ffffff;
   font-size: 1em;
-  border-radius: 6px;
+  border-radius: 15px;
+} */
+
+#cheat-btn {
+  background: black;
+  border: 1px solid #0c1a0b;
+  border-radius: 15px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s ease background;
+  /* width: 100%; */
+  text-align: center;
+  width: fit-content;
 }
+
+#cheat-btn:hover{
+  background: #fff;
+  color: #ae2932;
+  transition: 0.3s ease background;
+}
+
 
 .map{
   height:50vh;
   width: 27.5 wv;
   margin-top: 10px;
   margin-bottom: 30px;
+  border-radius: 15px;
   border: #0c1a0b 3px solid;
 }
 
@@ -169,12 +195,14 @@ form button:hover {
   border: #0c1a0b 3px solid;
   width: 400px;
   height: 400px;
+  border-radius: 15px;
 }
 
 .img-event{
   border: #0c1a0b 3px solid;
   width: 400px;
   height: 400px;
+  border-radius: 15px;
 }
 
 .map-div{
@@ -186,7 +214,7 @@ form button:hover {
 .button{
   background: black;
   border: 1px solid #0c1a0b;
-  border-radius: 10px;
+  border-radius: 15px;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -195,7 +223,7 @@ form button:hover {
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.3s ease background;
-  width: 100%;
+  /* width: 100%; */
   text-align: center;
 
 }
@@ -238,7 +266,7 @@ margin-top: 20px;
 .card{
   /* Modify clay.css properties */
   --clay-background: rgb(255, 243, 253);
-  --clay-border-radius: 48px;
+  --clay-border-radius: 15px;
 
   /* Extended styles */
   color: #302d2d;
@@ -246,7 +274,7 @@ margin-top: 20px;
 }
 .white {
   --clay-background: rgb(246, 246, 246);
-  --clay-border-radius: 48px;
+  --clay-border-radius: 15px;
   margin: 2%;
 }
 .all-events {
@@ -255,7 +283,7 @@ margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  border-radius: 35px;
+  border-radius: 15px;
 }
 .events {
   background-color: #ffffff;
@@ -307,6 +335,7 @@ ul.topnav {
   padding: 0;
   overflow: hidden;
   background-color: rgb(253, 253, 253);
+  border-radius: 15px;
 }
 
 ul.topnav li {float: left;}
