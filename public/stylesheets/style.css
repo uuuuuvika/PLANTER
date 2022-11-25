@@ -4,17 +4,28 @@ body {
   font-size: 18px;
   background-image: url('../images/flower.png');
 }
+
 #everything {
   margin: 3%;
 }
 
-
+#user {
+  height: 100vw;
+  background-color: #ffffff;
+  opacity: 85%;
+  border-radius: 35px;
+}
+#user p {
+  opacity: 100%;
+}
 a {
   color: #129e00;
   text-decoration: none;
   font-size: 1.5em;
 }
-
+h2 {
+  margin: 4%;
+}
 .form{
   margin: 30px auto;
 
@@ -123,13 +134,20 @@ form button:hover {
 }
 
 #cheat {
-  margin-top: 10%;
+  /* margin-top: 10%; */
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: space-between;
 }
+
 #cheat-btn {
   width: auto;
+  margin: 1%;
+  background-color: #ffffff;
   font-size: 1em;
-  border-radius: 26px;
+  border-radius: 6px;
 }
 
 .map{
@@ -216,6 +234,39 @@ margin-top: 20px;
 #logo{
   height: 40px;
 }
+
+.card{
+  /* Modify clay.css properties */
+  --clay-background: rgb(255, 243, 253);
+  --clay-border-radius: 48px;
+
+  /* Extended styles */
+  color: #302d2d;
+  padding: 18px;
+}
+.white {
+  --clay-background: rgb(246, 246, 246);
+  --clay-border-radius: 48px;
+  margin: 2%;
+}
+.all-events {
+  background-color: #ffffff;
+  opacity: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-radius: 35px;
+}
+.events {
+  background-color: #ffffff;
+  opacity: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.card-text {
+  font-size: 0.7em;
+}
 .red {
   color: tomato;
    /* Start the shake animation and make the animation last for 0.5 seconds */
@@ -237,12 +288,19 @@ margin-top: 20px;
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
-
-.plants {
-  border-radius: 200px;
+.all-plants {
   
-}
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
+}
+.plants {
+  margin: 1%;
+}
+.cont {
+  margin-top: 2%;
+}
 ul.topnav {
   list-style-type: none;
   margin: 0;
@@ -276,7 +334,6 @@ ul.topnav li.right {float: right;}
   }
 }
 
-
 .cont{
   padding:0 16px;
 }
@@ -299,3 +356,51 @@ ul.topnav li.right {float: right;}
   width: 400px;
 }
 
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: rgb(123, 255, 226); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav form {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

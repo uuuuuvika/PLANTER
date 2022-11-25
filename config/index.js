@@ -64,7 +64,7 @@ module.exports = (app) => {
   // );
   app.use(
     session({
-      secret: process.env.SESSION_SECRET,
+      secret: process.env.SESSION_SECRET || "super hyper secret key",
       resave: true,
       saveUninitialized: false,
       cookie: {
