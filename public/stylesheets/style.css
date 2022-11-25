@@ -21,7 +21,7 @@ body {
 a {
   color: #129e00;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 2.5em;
 }
 h2 {
   /* margin: 4%; */
@@ -326,9 +326,11 @@ margin-top: 20px;
 .plants {
   margin: 1%;
 }
+
 .cont {
   margin-top: 2%;
 }
+
 ul.topnav {
   list-style-type: none;
   margin: 0;
@@ -362,11 +364,17 @@ ul.topnav li.right {float: right;}
     display: none;
   }
 }
-
+mark {
+  background: #ffffff;
+  border-radius: 15px;
+}
 .cont{
   padding:0 16px;
 }
-
+p {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
 #logo {
   position: relative;
   margin: 5%;
