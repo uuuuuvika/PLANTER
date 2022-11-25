@@ -26,8 +26,7 @@ router.get("/signup", (req, res) => {
 // POST /auth/signup
 router.post("/signup", fileUploader.single('picture'), (req, res) => {
   const { username, email, password } = req.body;
-  const picture = req.file.path
-
+  const picture = req.file === undefined  ? undefined : req.file.path;
 
   // Check that username, email, and password are provided
   if (username === "" || email === "" || password === "") {
@@ -66,9 +65,10 @@ router.post("/signup", fileUploader.single('picture'), (req, res) => {
     .then((salt) => bcrypt.hash(password, salt))
     .then((hashedPassword) => {
       // Create a user and save it in the database
-      return User.create({ username, email,picture, password: hashedPassword });
+      return User.create({ username, email, picture, password: hashedPassword });
     })
     .then((user) => {
+      console.log(user)
       res.redirect("/auth/login");
     })
     .catch((error) => {
@@ -100,10 +100,9 @@ router.post("/login", (req, res, next) => {
       errorMessage:
         "All fields are mandatory. Please provide username, email and password.",
     });
-
     return;
   }
-
+  
   // Here we use the same logic as above
   // - either length based parameters or we check the strength of a password
   if (password.length < 6) {
@@ -148,11 +147,6 @@ router.post("/login", (req, res, next) => {
     })
     .catch((err) => next(err));
 });
-
-// // USER PROFILE
-// router.get("/userProfile", isLoggedIn, (req, res) => {
-//   res.render("profile/userProfile", { foundedUser: req.session.currentUser });
-// });
 
 // GET /auth/logout
 router.get("/logout", (req, res, next) => {

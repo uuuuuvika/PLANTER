@@ -12,7 +12,6 @@ const PlantBase = require("../models/PlantBase.model");
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
-
 // USER PROFILE + get all plants
 router.get("/userProfile", isLoggedIn, (req, res) => {
   PlantBase.find().limit(20) //CANGE THIS NUMBER WHEN WE MERGE OUR DATABASE!!!!
@@ -21,6 +20,7 @@ router.get("/userProfile", isLoggedIn, (req, res) => {
         .then((UserPlants) => {
           const arrayWithWater = [];
           UserPlants.forEach((el, index) => {
+
             arrayWithWater.push({ ...el, water: false });
             const currentWholeDate = new Date().toLocaleDateString('en-CA');
             const createdWholeDate = (el.createdAt).toLocaleDateString('en-CA');
@@ -70,7 +70,6 @@ router.get("/userProfile", isLoggedIn, (req, res) => {
     });
 });
   
-
 //CREATE "THE COSTUME ONE"
 router.post('/createUniqe', (req, res) => {
 
@@ -93,7 +92,6 @@ router.post('/createUniqe', (req, res) => {
     })
     .catch(error => console.log("Error! YOU SUCK!"));
 })
-
 
 //CHOOSE FROM EXISTING AND DISPLAY TIPS
 router.post('/choosePlant', (req, res) => {
