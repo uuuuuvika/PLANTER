@@ -1,11 +1,11 @@
 <div id="user">
 {{#if foundedUser}}
 <div class="cont">
-  <h2>Hey, {{ foundedUser.username }}!</h2>
-  <p>Here is a space for all your plants<br>
+  <h2><mark>Hey, {{ foundedUser.username }}!</mark></h2>
+  <p><mark>Here is a space for all your plants<br>
     simply click <span onclick="openNav()"><a href="#">here</a></span> to add a new one<br>
     or <span><a href="/auth/logout">here</a></span> to log out<br>
-    you can also consult our plantcare cheatsheet:
+    you can also consult our plantcare cheatsheet:</mark>
   </p>
   <div class="one">
     <form action='/choosePlant' method="POST">
