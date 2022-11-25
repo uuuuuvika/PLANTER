@@ -1,8 +1,13 @@
 <div id="user">
 {{#if foundedUser}}
-<div>
-  <button class="button button:hover"<a href="/auth/logout"></a>Log out</button>
-</div>
+
+  {{!-- <button class="button button:hover"<a href="/auth/logout"></a>Log out</button> --}}
+ <div class="one" >
+  <form action="/auth/logout" method="GET">
+    <button id="logout" class="button button:hover logout">Logout</button>
+  </form>
+</div> 
+
 <div class="cont">
   <h2><mark>Hey, {{ foundedUser.username }}!</mark></h2>
   <h3><mark>Here is a space for all your plants:</mark></h3>

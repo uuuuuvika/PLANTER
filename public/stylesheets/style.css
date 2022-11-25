@@ -226,7 +226,9 @@ form button:hover {
   text-align: center;
 
 }
-
+.logout {
+  width: 25%;
+}
 .button:hover{
   background: #fff;
   color: #ae2932;
