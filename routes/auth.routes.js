@@ -24,7 +24,7 @@ router.get("/signup", (req, res) => {
 });
 
 // POST /auth/signup
-router.post("/signup", fileUploader.single('picture'),(req, res) => {
+router.post("/signup", fileUploader.single('picture'), (req, res) => {
   const { username, email, password } = req.body;
   const picture = req.file.path
 

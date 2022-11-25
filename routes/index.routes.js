@@ -69,11 +69,11 @@ router.get('/eventdetail/:id',(req,res) => {
 // GET FIND AND EDIT THE EVENT
 // FIND
 
+
 // router.get('/eventsuser',isLoggedIn, (req, res) =>{
 //   Event.find({createdBy:req.session.currentUser._id})
-//   .then((result)=> {
-//     console.log(result);
-//     // res.render('/', {result})
+//   .then((foundEvents)=> {
+//     res.render('eventsuser', {foundEvents})
 //   })
 //   .catch(error => console.log('error!!! YOU STILL STILL SUCK', error));
 // })
