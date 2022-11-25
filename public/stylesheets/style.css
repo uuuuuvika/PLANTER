@@ -9,12 +9,12 @@ body {
   margin: 3%;
 }
 
-#user {
+/* #user {
   height: 100vw;
   background-color: #ffffff;
   opacity: 85%;
   border-radius: 35px;
-}
+} */
 #user p {
   opacity: 100%;
 }
