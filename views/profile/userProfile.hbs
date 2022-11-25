@@ -33,6 +33,9 @@
     <p class="card-text">{{_doc.plantType}}</p>
     <p class="card-text">{{_doc.h2o}}</p>
     <p class="card-text">{{_doc.bio}}</p>
+    <form action="{{_doc._id}}/delete" method="POST">
+      <button class="button button:hover logout" value="DELETE">DELETE</button>
+    </form>
   </div>
   {{/each}}
 </div>

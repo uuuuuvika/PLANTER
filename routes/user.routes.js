@@ -14,7 +14,7 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 
 // USER PROFILE + get all plants
 router.get("/userProfile", isLoggedIn, (req, res) => {
-  PlantBase.find().limit(20) //CANGE THIS NUMBER WHEN WE MERGE OUR DATABASE!!!!
+  PlantBase.find().limit(38)
     .then(allPlants => {
       PlantBase.find({ createdBy: req.session.currentUser._id })
         .then((UserPlants) => {
@@ -103,6 +103,17 @@ router.post('/choosePlant', (req, res) => {
     res.render('allPlants.hbs', { plant: plant})
   })
   .catch(error => console.log("Error! YOU SUCK!"));
+})
+
+//DELETE PLANT 
+router.post('/:plantId/delete', (req, res) => {
+  const { plantId } = req.params;
+  console.log(plantId)
+  PlantBase.findByIdAndRemove(plantId)
+  .then(() => res.redirect('/userProfile'))
+  .catch(error => {
+      console.log("Error while getting movie from the DB: ", error);
+  })
 })
 
 module.exports = router;

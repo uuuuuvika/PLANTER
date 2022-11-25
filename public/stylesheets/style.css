@@ -8,8 +8,11 @@ body {
 #everything {
   margin: 3%;
 }
+#center {
+  text-align: center;
+}
 
- #user {
+#user {
   height: 100vw;
   border-radius: 15px;
 }
@@ -22,13 +25,11 @@ a {
   text-decoration: none;
   font-size: 2.5em;
 }
-h2 {
-  /* margin: 4%; */
-}
+
 .form{
   margin: 30px auto;
-
 }
+
 form {
   width: 380px;
 }
@@ -287,8 +288,8 @@ margin-top: 20px;
   border-radius: 15px;
 }
 .events {
-  background-color: #ffffff;
-  opacity: 90%;
+  /* background-color: #ffffff;
+  opacity: 90%; */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -392,6 +393,10 @@ p {
   margin: 20px;
   padding: 20 px;
   width: 400px;
+}
+#eventdiv {
+  background-color: #fff;
+  border-radius: 15px;
 }
 
 .sidenav {
