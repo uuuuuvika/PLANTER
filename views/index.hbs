@@ -5,29 +5,21 @@
     <p>This app will help you take care of your plants by reminding you when to water them.
       <br> You can also use the app to create or find plant swap parties near you.</p>
     <a href="/auth/signup">Signup</a> or <a href="/auth/login">Login</a> to get started!
-
-
     </div>
 </div>
 <div>
-  <h2 class="h2">Upcomming events:</h2>
+  <h2 class="h2">Upcoming events:</h2>
 </div>
-<div class="containerflex">
 
- 
-{{#each showEvents}}
-
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="images/greenbar.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{name}}</h5>
-    <p class="card-text">{{description}}</p>
-    <div>
-
+<div class="all-events">
+  {{#each showEvents}}
+    <div class="clay card white " style="width: 18rem;">
+  {{!-- <img class="card-img-top" src="images/greenbar.png" alt="Card image cap"> --}}
+  {{!-- <div class="card-body"> --}}
+      <h5 class="card-title">{{name}}</h5>
+      <p class="card-text">{{description}}</p>
+  {{!-- </div> --}}
+      <a href="/eventdetail/{{id}}" class="button button:hover">View Event</a>
     </div>
-    <a href="/eventdetail/{{id}}" class="button button:hover">View Event</a>
-
-  </div>
-
   {{/each}}
 </div>

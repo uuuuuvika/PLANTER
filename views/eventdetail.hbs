@@ -1,19 +1,17 @@
+<div class="events">
 <div class="eventdetail">
-<h2>{{selectedEvent.name}}</h5>
-<div id="hideco">
-   <span>{{selectedEvent.coordinates}}</span>
-</div>
-<div>
-</div>
-<div class="event-flex">
-<div >
-{{selectedEvent.description}}
-</div>
-<div class="map-event" id='map2'></div>
-<script src="/js/map2.js"></script>
-</div>
-</div>
+  {{!-- <h2>{{selectedEvent.name}}</h5> --}}
+    {{!-- <div id="hideco">
+      <span>{{selectedEvent.coordinates}}</span>
+    </div> --}}
+  {{!-- <div class="event-flex">  --}}
+{{!-- <div>
+  {{selectedEvent.description}}
+</div> --}}
+<div class="map-event events" id='map2'></div>
 
 <div>
-  <img  class="img-event" src="{{selectedEvent.picture}}" alt="picture-of-event">  
+  <img  class="img-event events" src="{{selectedEvent.picture}}" alt="picture-of-event">  
 </div>
+</div>
+<script src="/js/map2.js"></script>

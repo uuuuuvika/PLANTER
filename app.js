@@ -28,7 +28,6 @@ app.locals.appTitle = `${capitalize(projectName)} created with IronLauncher`;
 
 // const { fileUploader } = require('../config/cloudinary.config');
 
-
 // 👇 Start handling routes here
 const indexRoutes = require("./routes/index.routes");
 app.use("/", indexRoutes);

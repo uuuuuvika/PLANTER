@@ -6,7 +6,6 @@ const Event = require('../models/Event.model');
 const isLoggedIn = require('../middleware/isLoggedIn');
 const { fileUploader } = require('../config/cloudinary.config');
 
-
 // GET ALL EVENTS ON INDEX
 router.get("/", (req, res, next) => {
   Event.find()
@@ -17,29 +16,22 @@ router.get("/", (req, res, next) => {
   .catch(error => console.log('error!!! YOU SUCK INDEX'));
 });
 
-
-
-
+//CREATE STATIC PLANT!!!
 router. get("/plantBase/create", (req, res) => res.render("plantbase.hbs"))
 
-router.post('/plantBase/create', fileUploader.single('yourPlant'), (req, res) => {
+router.post('/plantBase/create', (req, res) => {
   console.log("create plant")
   const {plantType, h2o, light, bio} = req.body;
-  const yourPlant = req.file.path
-  
-  PlantBase.create({plantType, h2o, yourPlant, light, bio})
+  PlantBase.create({plantType, h2o, light, bio})
   .then((result) => console.log("result: ", result))
   .then(() => res.redirect('/plantBase/create'))
   .catch(error => console.log('error:', error))
 })
 
-// EVENTS
-
+/////EVENTS/////
 // GET
 router.get("/event/create", (req, res) => res.render("event.hbs"))
 
-
-/////EVENTS/////
 // POST CREATE EVENT
 router.post('/event/create', isLoggedIn, fileUploader.single('picture'), (req, res)=>{
   
