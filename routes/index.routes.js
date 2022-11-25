@@ -36,9 +36,8 @@ router.get("/event/create", (req, res) => res.render("event.hbs"))
 router.post('/event/create', isLoggedIn, fileUploader.single('picture'), (req, res)=>{
   
   const {date, name, coordinates,description} = req.body;
-  const picture = req.file.path
+  const picture = req.file === undefined  ? undefined : req.file.path;
   const createdBy = req.session.currentUser._id
-  console.log(req.session.currentUser);
   
   Event.create({date, name, createdBy, picture, coordinates, description})
   
