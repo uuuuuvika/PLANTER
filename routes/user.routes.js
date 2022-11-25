@@ -46,7 +46,7 @@ router.get("/userProfile", isLoggedIn, (req, res) => {
               water = false;
               arrayWithWater[index].water = water;
             }
-            if (el.h2o === "once per day" && currentWholeDate !== createdWholeDate) {
+            if (el.h2o === "once per day") { //ADD BACK !!!!!!!!!!!!!!!!!!!!!!!!
               waterYes()
             }
             else if (el.h2o === "once per week" && currentWholeDate !== createdWholeDate) {
