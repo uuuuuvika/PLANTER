@@ -1,7 +1,5 @@
 <div id="user">
 {{#if foundedUser}}
-
-  {{!-- <button class="button button:hover"<a href="/auth/logout"></a>Log out</button> --}}
  <div class="one" >
   <form action="/auth/logout" method="GET">
     <button id="logout" class="button button:hover logout">Logout</button>
@@ -34,7 +32,7 @@
     <p class="card-text">{{_doc.h2o}}</p>
     <p class="card-text">{{_doc.bio}}</p>
     <form action="{{_doc._id}}/delete" method="POST">
-      <button class="button button:hover logout" value="DELETE">DELETE</button>
+      <button class="button button:hover logout x" value="DELETE">DELETE</button>
     </form>
   </div>
   {{/each}}
