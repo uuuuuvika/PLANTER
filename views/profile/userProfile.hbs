@@ -1,18 +1,15 @@
 <div id="user">
 {{#if foundedUser}}
- <div class="one" >
+<div class="cont">
   <form action="/auth/logout" method="GET">
     <button id="logout" class="button button:hover logout">Logout</button>
   </form>
-</div> 
-
-<div class="cont">
-  <h2><mark>Hey, {{ foundedUser.username }}!</mark></h2>
-  <h3><mark>Here is a space for all your plants:</mark></h3>
-    <p><mark>
-      Simply <span onclick="openNav()"><a href="#">click</a></span> to add a new one or add a new plant swap <span><a href="/event/create">event</a></span>.<br></p>
-   <p><mark>If you're not sure about the plant care, consult our plantcare cheatsheet:</mark>
+  <h3>Hey, {{ foundedUser.username }}! Here is a space for all your plants:</h3>
+    <p>
+      Simply <span onclick="openNav()"><a href="#">click</a></span> to add a new one or add a new plant swap <span><a href="/event/create">event</a></span><br></p>
+   <p>If you're not sure about the plant care, consult our plantcare cheatsheet:
   </p>
+
   <div class="one">
     <form action='/choosePlant' method="POST">
       <select name="myPlants" id="myPlants" aria-label="Choose your plant">
@@ -24,6 +21,7 @@
     </form>
   </div>
 </div>
+
 <div class="all-plants">
   {{#each plantArr}}
   <div class="clay card {{#if water}} red {{/if}} plants" style="width: 18rem;">
@@ -37,11 +35,7 @@
   </div>
   {{/each}}
 </div>
-{{!-- <div class="one">
-  <form action="/auth/logout" method="GET">
-    <button id="logout">Logout</button>
-  </form>
-</div> --}}
+
 <div id="mySidenav" class="sidenav" class="popup" onclick="myFunction()">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <div class="popuptext" id="myPopup">
@@ -75,6 +69,5 @@
 {{else}}
 <p>Still no logged in user, sorry!</p>
 {{/if}}
-
 </div>
 

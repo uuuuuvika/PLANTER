@@ -1,3 +1,5 @@
+* {box-sizing: border-box}
+
 body {
   padding: 50px;
   font-family: monospace;
@@ -21,13 +23,21 @@ body {
 #user p {
   opacity: 100%;
 }
+
 a {
-  color: #129e00;
+  color: #0d7300;
   text-decoration: none;
   font-size: 2.5em;
 }
 
-.form{
+i {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 2mm;
+  font-style: normal;
+}
+
+.form {
   margin: 30px auto;
 }
 
@@ -76,23 +86,19 @@ form button:hover {
   transition: 0.3s ease background;
 }
 
-#to-right {
-  padding: 1em;
-  float: left;
-}
-
 #login-form {
   margin: 0px;
   width: auto;
+  box-shadow: 2vmin #0c1a0b;
 }
 
-/* POPUP CONTAINER*/
+/* POPUP*/
 .popup {
   position: relative;
   display: inline-block;
   cursor: pointer;
 }
-/* The actual popup */
+
 .popup .popuptext {
   visibility: hidden;
   width: 550px;
@@ -106,10 +112,8 @@ form button:hover {
   position: absolute;
   z-index: 1;
   top: 125%;
-  /* left: 50%; */
-  /* margin-left: -80px; */
 }
-/* Popup arrow */
+
 .popup .popuptext::after {
   margin: 10px;
   content: "";
@@ -121,11 +125,11 @@ form button:hover {
   border-style: solid;
   border-color: #555 transparent transparent transparent;
 }
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
+
 .popup .show {
   visibility: visible;
-} 
-/* Add animation (fade in the popup) */
+}
+
 @-webkit-keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -137,22 +141,12 @@ form button:hover {
 }
 
 #cheat {
-  /* margin-top: 10%; */
   text-align: center;
   display: flex;
   flex-direction: row;
   align-self: center;
   justify-content: space-between;
 }
-
-/* #cheat-btn {
-  width: auto;
-  margin: 1%;
-  background-color: #ffffff;
-  font-size: 1em;
-  border-radius: 15px;
-} */
-
 #cheat-btn {
   background: black;
   border: 1px solid #0c1a0b;
@@ -263,24 +257,20 @@ margin-top: 20px;
 .shortbtn{
   width: 200px
 }
-#logo{
-  height: 40px;
-}
 
 .card{
-  /* Modify clay.css properties */
   --clay-background: rgb(255, 243, 253);
   --clay-border-radius: 15px;
-
-  /* Extended styles */
   color: #302d2d;
   padding: 18px;
 }
+
 .white {
   --clay-background: rgb(246, 246, 246);
   --clay-border-radius: 15px;
   margin: 2%;
 }
+
 .all-events {
   background-color: #ffffff;
   opacity: 90%;
@@ -289,6 +279,7 @@ margin-top: 20px;
   justify-content: space-around;
   border-radius: 15px;
 }
+
 .events {
   /* background-color: #ffffff;
   opacity: 90%; */
@@ -296,17 +287,17 @@ margin-top: 20px;
   flex-direction: row;
   justify-content: space-around;
 }
+
 .card-text {
   font-size: 0.7em;
 }
-.red {
-  color: tomato;
-   /* Start the shake animation and make the animation last for 0.5 seconds */
-   animation: shake 0.5s; 
 
-   /* When the animation is finished, start again */
+.red {
+  color: rgb(87, 207, 255);
+   animation: shake 0.5s; 
    animation-iteration-count: infinite; 
 }
+
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
   10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -325,7 +316,6 @@ margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-
 }
 
 .plants {
@@ -368,20 +358,18 @@ ul.topnav li.right {float: right;}
     display: none;
   }
 }
-mark {
-  background: #ffffff;
-  border-radius: 15px;
-}
+
 .cont{
   padding:0 16px;
 }
+
 p {
   margin-top: 2%;
   margin-bottom: 2%;
 }
+
 #logo {
   position: relative;
-  margin: 5%;
   width: 50px;
   height: auto;
 }
@@ -396,25 +384,26 @@ p {
   padding: 20 px;
   width: 400px;
 }
+
 #eventdiv {
   background-color: #fff;
   border-radius: 15px;
 }
 
+/* CREATE A PLANT SIDE FORM */
 .sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  height: 100%; 
+  width: 0;
+  position: fixed;
+  z-index: 1; 
+  top: 0;
   left: 0;
-  background-color: rgb(123, 255, 226); /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  background-color: rgb(123, 255, 226); 
+  overflow-x: hidden; 
+  padding-top: 60px;
+  transition: 0.5s; 
 }
 
-/* The navigation menu links */
 .sidenav form {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -424,12 +413,10 @@ p {
   transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -438,17 +425,24 @@ p {
   margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left .5s;
   padding: 20px;
 }
 
+.x {
+  margin-top: 5%;
+  width: 50%;
+  background-color: #ae2932;
+}
+  
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
+  .sidenav form{padding: 0}
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
 /* Responsive events */
 @media screen and (max-width: 600px) {
   .map-event {
@@ -472,23 +466,10 @@ p {
   .x {
     width: 30%;
   }
-  /* .one {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-  } */
-  /* .myPlants {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-  } */
 }
 
 @media screen and (prefers-color-scheme: dark) {
- 
-  mark {
-    background: none;
-  }
+
   .h2 {
     background: none;
   }
