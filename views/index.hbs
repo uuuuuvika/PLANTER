@@ -1,23 +1,21 @@
 <div class="container-intro">
   <div class="cont">
-   <h4> <mark>Your plant care and baby plant swap app</mark></h4>
-    <p><mark>This app will help you take care of your plants by reminding you when to water them.</mark>
-      <br><mark>You can also use the app to create or find plant swap parties near you.</mark></p>
-    <mark><a href="/auth/signup">Signup</a> or <a href="/auth/login">Login</a> to get started!</mark>
+    <h4> Welcome to <i>PLANTER</i>: Your plant care and baby plant swap app</h4>
+    <p>Planter will help you take care of your plants by reminding you when to water them
+      <br>You can also use the app to create or find plant swap parties near you
+    </p>
+    <a href="/auth/signup">Signup</a> or <a href="/auth/login">Login</a> to get started
   </div>
 </div>
-<div >
+<div>
   <h2 class="h2">Upcoming events:</h2>
 </div>
 <div class="all-events">
   {{#each showEvents}}
-    <div class="clay card white " style="width: 18rem;">
-  {{!-- <img class="card-img-top" src="images/greenbar.png" alt="Card image cap"> --}}
-  {{!-- <div class="card-body"> --}}
-      <h5 class="card-title">{{name}}</h5>
-      <p class="card-text">{{description}}</p>
-  {{!-- </div> --}}
-      <a href="/eventdetail/{{id}}" class="button button:hover">View Event</a>
-    </div>
+  <div class="clay card white " style="width: 18rem;">
+    <h5 class="card-title">{{name}}</h5>
+    <p class="card-text">{{description}}</p>
+    <a href="/eventdetail/{{id}}" class="button button:hover">View Event</a>
+  </div>
   {{/each}}
 </div>

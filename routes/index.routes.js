@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const PlantBase = require('../models/PlantBase.model');
+const Plants = require('../models/Plants.model');
 const Event = require('../models/Event.model');
+
 const isLoggedIn = require('../middleware/isLoggedIn');
 const { fileUploader } = require('../config/cloudinary.config');
 
@@ -17,14 +18,14 @@ router.get("/", (req, res, next) => {
 });
 
 //CREATE STATIC PLANT!!!
-router. get("/plantBase/create", (req, res) => res.render("plantbase.hbs"))
+router. get("/staticPlant/create", (req, res) => res.render("staticPlant.hbs"))
 
-router.post('/plantBase/create', (req, res) => {
+router.post('/staticPlant/create', (req, res) => {
   console.log("create plant")
   const {plantType, h2o, light, bio} = req.body;
-  PlantBase.create({plantType, h2o, light, bio})
+  Plants.create({plantType, h2o, light, bio})
   .then((result) => console.log("result: ", result))
-  .then(() => res.redirect('/plantBase/create'))
+  .then(() => res.redirect('/staticPlant/create'))
   .catch(error => console.log('error:', error))
 })
 
@@ -41,7 +42,7 @@ router.post('/event/create', isLoggedIn, fileUploader.single('picture'), (req, r
   
   Event.create({date, name, createdBy, picture, coordinates, description})
   
-  .then(() => res.redirect('/event/create'))
+  .then(() => res.redirect('/'))
   .catch(error => console.log('error!!! YOU STILL SUCK', error));
 })
 
@@ -69,11 +70,8 @@ router.get('/eventdetail/:id',(req,res) => {
 //   .catch(error => console.log('error!!! YOU STILL STILL SUCK', error));
 // })
 
+
 // DISLPLAY
 // ClICK AND EDIT
 
-
-router.get
-
-router.get('')
 module.exports = router;

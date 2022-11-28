@@ -133,13 +133,10 @@ router.post("/login", (req, res, next) => {
               .render("auth/login", { errorMessage: "Wrong credentials." });
             return;
           }
-
           // Add the user object to the session object
           req.session.currentUser = user.toObject();
           // Remove the password field
           delete req.session.currentUser.password;
-
-
           console.log(req.session.currentUser)
           res.redirect("/userProfile"); // maybe add auth again !!!!!
         })

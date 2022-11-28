@@ -9,6 +9,7 @@ const plantBaseSchema = new Schema(
     plantType: {
         type: String,
         required: true, 
+        unique: false,
         trim: true
     }, 
     h2o: {
@@ -34,16 +35,11 @@ const plantBaseSchema = new Schema(
       ref: 'User',
       require: false
     },
-    // adoptedBy: [{
-    //   type: Schema.Types.ObjectId, // or default 
-    //   ref: 'User',
-    //   require: false
-    // }]
   },
   {
     timestamps: true,
   }
 );
 
-const PlantBase = model("PlantBase", plantBaseSchema);
-module.exports = PlantBase;
+const Plants = model("Plants", plantBaseSchema);
+module.exports = Plants;
